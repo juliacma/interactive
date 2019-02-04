@@ -3,11 +3,119 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<style>
+		/* RESETS */
+
+		html, body {
+		  height: 100%;
+		}
+
+		/* TYPOGRAPHY */
+
+		
+
+		/* BASE */
+
+		body {
+		  font-size: 18px;
+		  line-height: 1.3;
+		  font-family: Helvetica, sans-serif;
+		  font-weight: 400;
+		  text-rendering: optimizeLegibility;
+		  padding: 20px;
+		}
+
+		p:first-child {
+		  margin-top: 0;
+		}
+
+		p:last-child {
+		  margin-bottom: 0;
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 2em;
+			margin: 15px 0;
+		}
+
+		h1.subtitle {
+			font-style: italic;
+			font-weight: normal;
+			font-size: 1.5em;
+
+		}
+
+		h2 {
+			margin: 25px 20px 15px 0;
+		}
+
+		h3, h4, h5{
+			margin: 0px 0px 15px 0;
+		}
+
+		h4, h5 {
+			font-style: italic;
+			font-size: 1em;
+		}
+
+		h5 {
+			font-weight: normal;
+		}
+
+		a {
+		  text-decoration: none;
+		  color: black;
+		}
+
+		a:hover {
+		  text-decoration: none;
+		}
+
+		a:active { color: black; }
+		a:visited { color: black; }
+
+		a.top {
+			font-size: .5em;
+		}
+
+		sup {
+			font-size: .6em;
+		}
+
+		hr {
+		  margin: 5px 0;
+		  border: 0;
+		  border-bottom: 2px solid black;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		/* CONTENT */
+
+		#container {
+		  max-width: 720px;
+		  margin: 0 auto 50px auto;
+		}
+
+		.section {
+			display: flex;
+			align-items: baseline;
+		}
+		
+	</style>
 </head>
-<body>
+<body id="container">
 	<h1>Navigation and Visitor Interactions: <br>Best Practices, Tools, and Technologies</h1>
-	<h2><i>ENAS410/ARCH390: Making Spaces, Assignment 4</i></h2>
-	<p>Sarim Abbas, Antonio Cao, Julia Ma, Evan Smith</p>
+	<h1 class="subtitle"> ENAS410/ARCH390: Making Spaces, Assignment 4</h1>
+	<p class="center">Sarim Abbas, Antonio Cao, Julia Ma, Evan Smith</p>
 
 
 	<h2>Table of Contents</h2>
@@ -22,15 +130,21 @@
 		<li><a href="#works-cited">Works Cited</a></li>
 	</ul>
 
-	<h2 id="summary">Executive Summary</h2>
+	<div class="section">
+		<h2 id="summary">Executive Summary</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
 
-	<p>While “interactive exhibit” tends to conjure images of screens and digital content, museums have long been providing ways for visitors to engage with the content behind the glass. This engagement is perhaps best characterized in the Discovery Room on the second floor of the Peabody, a designated space to bring hands-on interaction with living animals and other natural treasures. “The Discovery Room’s most important rule is ‘Please Touch!’” proclaims its website,<sup>1</sup> and it follows through on that rule. With large numbers of children coming to the museum daily, such a child-focused area sees heavy use and is extremely popular (over 60,000 visitors visit the space annually out of 150,000 total).</p>
+	<p>While “interactive exhibit” tends to conjure images of screens and digital content, museums have long been providing ways for visitors to engage with the content behind the glass. This engagement is perhaps best characterized in the Discovery Room on the second floor of the Peabody, a designated space to bring hands-on interaction with living animals and other natural treasures. “The Discovery Room’s most important rule is ‘Please Touch!’” proclaims its website,<sup id="s1"><a href="#1">1</a></sup></sup> and it follows through on that rule. With large numbers of children coming to the museum daily, such a child-focused area sees heavy use and is extremely popular (over 60,000 visitors visit the space annually out of 150,000 total).</p>
 
 	<p>We set out to explore ways in which an expansion of the Discovery Room’s philosophy to the wider Peabody experience could help increase engagement amongst children, adults and those with disabilities. We also wanted to explore novel tools and technologies that could help visitors interact with exhibits and navigate the museum space. We took inspiration from the existing exhibits and interactions at the Peabody, and the innovative work being done by other museums and creatives. </p>
 
 	<p>What follows is an assessment across four dimensions: interactive screens and digital exhibits, virtual and augmented reality, localization technology, and accessibility considerations. When conducting our research, we tried to be mindful of the Peabody’s mission to be a center for advancing science and maintaining good stewardship over its collections. As next steps, we propose taking the pulse of the Peabody staff in the kinds of technologies that they are interested in exploring, and then diving deep into how those may be used to best complement the museum’s rich history and important collections.</p>
 
-	<h2 id="screens">Screens and Interactive Exhibits</h2>
+	<div class="section">
+		<h2 id="screens">Screens and Interactive Exhibits</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
 
 	<h3>Touchscreens</h3>
 	<p>A crucial first step in the process of engaging visitors is bringing text and images out from behind the glass of an exhibit and into a more interactive setting. While physical interactions with the specimens are possible in very select cases, these interactions require the oversight of a museum employee or volunteer. The Peabody already has taken steps to that effect, with touchscreen kiosks in both the Great Hall and Human Origins exhibit, but there are clear points for further growth and innovation.</p>
@@ -39,13 +153,13 @@
 	
 	<p>These old implementations of touchscreen kiosks may not have aged gracefully, but their information density is an indispensable tool in a museum like the Peabody. Even with the huge increase in exhibit space, the museum has vastly more artifacts than can ever be displayed in the physical exhibit halls, and many items have much more information to explore than can fit on a placard. Touchscreens help alleviate these issues, since one screen can effectively be many multiples of its area worth of information. Beyond that, with the right data management system the information can be updated in an instant and a library of content can be easily rotated through the museum, enabling much faster turnover of exhibits without needing to fabricate new physical signage for every iteration. </p>
 
-	<p>With the need to use such screens in the space, a look at current touchscreen technology reveals how far the products have come. One of the industry leaders is Ideum,<sup>2</sup> which offers large-scale touchscreen tables (referred to as touch tables), and more conventional angled screens. Most of their products feature integrated computing, eliminating the need to build space for a concealed computer to route information to the screens. They also support usage by up to eight users at a time, reducing the wait time for visitors to access the information. Contrast this with the screen in the Great Hall, where the usage pattern generally consists of one group at a time using the screen to page through information without others being able to either use the screen or even see what is being explored. A touch table breaks out of the historical use of these types of exhibits as desktop-style browsing by one user. Instead, a dynamic user interface can allow information to “float” around the screen, with different stages of the information intermingled. This approach supports many users are looking at the same elements of the content at once (for example, the case of a group all reading the introduction), or each user exploring what interests them (each guest wants to learn about the discovery of a different specimen). The content can be freely rotated and sized on the screen based on the orientation of the user and varying visual needs. </p>
+	<p>With the need to use such screens in the space, a look at current touchscreen technology reveals how far the products have come. One of the industry leaders is Ideum,<sup id="s2"><a href="#2">2</a></sup></sup> which offers large-scale touchscreen tables (referred to as touch tables), and more conventional angled screens. Most of their products feature integrated computing, eliminating the need to build space for a concealed computer to route information to the screens. They also support usage by up to eight users at a time, reducing the wait time for visitors to access the information. Contrast this with the screen in the Great Hall, where the usage pattern generally consists of one group at a time using the screen to page through information without others being able to either use the screen or even see what is being explored. A touch table breaks out of the historical use of these types of exhibits as desktop-style browsing by one user. Instead, a dynamic user interface can allow information to “float” around the screen, with different stages of the information intermingled. This approach supports many users are looking at the same elements of the content at once (for example, the case of a group all reading the introduction), or each user exploring what interests them (each guest wants to learn about the discovery of a different specimen). The content can be freely rotated and sized on the screen based on the orientation of the user and varying visual needs. </p>
 
-	<p>While many of Ideum’s products are industry-standard and mostly building upon previous iterations of touchscreen technology, their Tangible Engine software<sup>3</sup> is a leader in merging physical objects with capacitive touchscreens. By placing unique patterns of conductive material onto small puck-like bases, the program can identify physical items when placed directly on the touch table without a seperate identification system like RFID and an overhead tracking system with cameras, which was the previous standard way to achieve such a physical interaction with the screen output. These bases can either be representative (such as if they were printed with images of different dinosaurs), or literal, providing the item in question is relatively small, such as a shell or 3D print of a specimen. Since the bases are identified both in content, location, and orientation, users can select a physical model they are interested in, place it on the screen, and information appears around it. The user can then twist the base to orient the information to them, or pass it to another user to look at on a different part of the same screen.</p>
+	<p>While many of Ideum’s products are industry-standard and mostly building upon previous iterations of touchscreen technology, their Tangible Engine software<sup id="s3"><a href="#3">3</a></sup></sup> is a leader in merging physical objects with capacitive touchscreens. By placing unique patterns of conductive material onto small puck-like bases, the program can identify physical items when placed directly on the touch table without a seperate identification system like RFID and an overhead tracking system with cameras, which was the previous standard way to achieve such a physical interaction with the screen output. These bases can either be representative (such as if they were printed with images of different dinosaurs), or literal, providing the item in question is relatively small, such as a shell or 3D print of a specimen. Since the bases are identified both in content, location, and orientation, users can select a physical model they are interested in, place it on the screen, and information appears around it. The user can then twist the base to orient the information to them, or pass it to another user to look at on a different part of the same screen.</p>
 
 	<p>This particular iteration of the touchscreen evolution is particularly appropriate for a museum like the Peabody, where there is such a huge catalogue of items that can fit in Petri-like containers. As shown in Figure 1.1, the interaction of small specimens with the screen and the resulting touch menus that spread out of it is entrancing. Imagine an exhibit on shells where the visitors can select an shell that interests them and see the environment it came from spring to life on the screen around it, with information about the species, as well as the other elements it is connected to in the ecosystem and directions to where those elements are located elsewhere in the museum. </p>
 
-	<p>This technology can also be used to create interactive gamification, as shown by the Rio Tinto Alcan Planetarium in Montreal.<sup>4</sup> Their EXO exhibit features several round screens representing Earth right after its creation. By placing pucks of different graphics onto the screen, visitors can add meteor collisions that bring water, microorganisms to the oceans, greenhouse gases to build up the atmosphere, and finally manipulate the digital globe to see their handiwork.</p>
+	<p>This technology can also be used to create interactive gamification, as shown by the Rio Tinto Alcan Planetarium in Montreal.<sup id="s4"><a href="#4">4</a></sup></sup> Their EXO exhibit features several round screens representing Earth right after its creation. By placing pucks of different graphics onto the screen, visitors can add meteor collisions that bring water, microorganisms to the oceans, greenhouse gases to build up the atmosphere, and finally manipulate the digital globe to see their handiwork.</p>
 
 	<p>Simply updating the existing touchscreens in the museum to more modern specification is a necessary step to take advantage of the information density they offer, but augmenting the experience with physical elements creates an extremely powerful interactive tool while maintaining the Peabody’s focus on physical artifacts. It does enlarge the size of the screens in the space, but the number of users also drastically increases and encourages more personalized exploration of the information on hand.</p>
 
@@ -54,14 +168,17 @@
 	
 	<p>Consider David Friend Hall if each mineral’s information was provided by a small screen: the striking darkness and contemplative nature of the space would be drastically affected. For this reason, museum-wide adoption of traditional, backlit screens for all text display is not preferable. </p>
 
-	<p>However, there do exist non-backlit digital displays that may be more suitable called “digital paper”.This technology was popularized by the Amazon Kindle, which showcased its major features: it is a passive display, meaning it only consumes power to change the current screen output and otherwise is off, and matte surface interacting naturally with ambient light. These two features make digital paper an ideal solution to dynamically updating signage in a space while maintaining full control of the lighting environment and minimizing power consumption. The battery-powered options from Visix<sup>5</sup> can last up to 10,000 updates, which makes the power supply about as future-proofed as possible for battery replacement while removing any additional wiring challenges and allowing for movement to different parts of the museum. The Visix signs are updated by a Radio-Frequency (RF) transmitter, and can be used to probe the current battery life of signs to proactively replace batteries in the case of failures. For a Peabody looking to reimagine itself as a dynamic, constantly evolving space, easy changeable signage without wasteful reprinting seems to be a must. Beyond the functional elements, though, it is not hard to imagine an implementation of digital paper as a more interactive element in a gallery where low light levels are required, as long as the information is not in color or animated. </p>
+	<p>However, there do exist non-backlit digital displays that may be more suitable called “digital paper”.This technology was popularized by the Amazon Kindle, which showcased its major features: it is a passive display, meaning it only consumes power to change the current screen output and otherwise is off, and matte surface interacting naturally with ambient light. These two features make digital paper an ideal solution to dynamically updating signage in a space while maintaining full control of the lighting environment and minimizing power consumption. The battery-powered options from Visix<sup id="s5"><a href="#5">5</a></sup></sup> can last up to 10,000 updates, which makes the power supply about as future-proofed as possible for battery replacement while removing any additional wiring challenges and allowing for movement to different parts of the museum. The Visix signs are updated by a Radio-Frequency (RF) transmitter, and can be used to probe the current battery life of signs to proactively replace batteries in the case of failures. For a Peabody looking to reimagine itself as a dynamic, constantly evolving space, easy changeable signage without wasteful reprinting seems to be a must. Beyond the functional elements, though, it is not hard to imagine an implementation of digital paper as a more interactive element in a gallery where low light levels are required, as long as the information is not in color or animated. </p>
 
 	<p>There are other areas of the museum where the intention of the current conventional signage is ready-made for update by animated content on screens. Consider the various dioramas in the Peabody: they all have images similar to Figure 1.2, with a sketch of the diorama overlayed with labels and a corresponding key with information about the flora and fauna inside. Imagine instead a high-resolution picture of the diorama on a small touchscreen with understated outlining around the items of interest. In much less space, the screen can provide all the information of the conventional image while avoiding the deciphering stage and can be coupled with minor gamification to increase interaction with the dioramas themselves. This could take the form of an I-Spy-style game where the screen can prompt visitors to find a certain number of animals or types of animals within the diorama and show correct answers. Additionally, the difference between independently looking at the dioramas and hearing about them from an experienced curator is dramatic. The design of these exhibits is a historical marvel of the Peabody, and there would be great value in bringing attention not only to the individual specimens but the layered storylines within. With digital signage, visitors can discover a different drama each time they visit, as they are prompted to notice the bird distracting a predator from her nest one day, and the perfectly camouflaged butterfly on the tree trunk the next. </p>
 
 	<h3>Conclusion</h3>
 	<p>With a more focused eye on the possibilities of digital 2D content within the Peabody, there are significant opportunities to increase visitor interaction, both directly in the functionality of existing exhibits and also by streamlining exhibit cycling, making the museum’s content equally engaging each visit. Though traditional screens are by no means always the answer to conventional signage, digital paper can combine the best of both worlds in certain situations.</p>
 
-	<h2 id="vr-ar">Virtual Reality and Augmented Reality</h2>
+	<div class="section">
+		<h2 id="vr-ar">Virtual Reality and Augmented Reality</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
 
 	<p>Discussions on museums adapting modern technologies would not be complete without referencing Virtual Reality (VR) and Augmented Reality (AR). These technologies have been in use by museums at least as early as 2010, but it is only within the last five years that the advent of lighter, cheaper headsets, tools and software have unlocked the promise of these technologies.</p>
 
@@ -89,26 +206,26 @@
 
 	<h4>Consumer technology</h4>
 	<h5>Smartphones (AR)</h5>
-	<p>Figures 2.1 and 2.2 are representative examples of consumer AR experiences offered in museums today. The first figure shows a proof-of-concept by the UK-based company, RiseAR.<sup>6</sup> When a special code (similar to a QR code) is viewed through a smartphone camera, the encased specimen appears as a high-resolution 3D model, which can be freely magnified or rotated. The motivation behind the AR app is to encourage visitors to closely inspect the physical characteristics of a specimen as it lived. </p>
+	<p>Figures 2.1 and 2.2 are representative examples of consumer AR experiences offered in museums today. The first figure shows a proof-of-concept by the UK-based company, RiseAR.<sup id="s6"><a href="#6">6</a></sup> When a special code (similar to a QR code) is viewed through a smartphone camera, the encased specimen appears as a high-resolution 3D model, which can be freely magnified or rotated. The motivation behind the AR app is to encourage visitors to closely inspect the physical characteristics of a specimen as it lived. </p>
 
 	<p>The second figure—somewhat related—shows visitors at the Natural History Museum, London looking through their screens at an animated dinosaur model. The animation communicates aspects about dinosaur appearance and behavior that is inadequately described by fossils and illustrations alone. In contrast to a video playing on a flat screen, the AR experience lets viewers walk ‘around’ the specimen and focus on parts they want to see. The experience is packaged into an app so that visitors can use their personal devices, but for those without smartphones, a limited number of museum iPads are available for use.</p>
 
-	<p>Just five years ago, developing such interactions would have been time-consuming and expensive, requiring proprietary tools or experimental open-source software. Today, with the advent of ARKit and ARCore (available on the iOS and Android platforms respectively), as well as free, cross-platform tools like the Unity game engine, it has become inexpensive and simpler to develop such applications. At Yale’s Tsai Center for Innovative Thinking, for instance, Blended Reality workshops instruct students how to create AR worlds in half an hour, with no code.<sup>7</sup> Part of the reason building AR (and VR) has become easier is because modern tools abstract away the technical difficulties of anchoring perspective, identifying planes, and interfacing with headsets. The bulk of a developer’s time is spent modelling and animating objects. This means that modern AR/VR is closer to an art form than an engineering problem, which takes time to get right for each specimen. </p>
+	<p>Just five years ago, developing such interactions would have been time-consuming and expensive, requiring proprietary tools or experimental open-source software. Today, with the advent of ARKit and ARCore (available on the iOS and Android platforms respectively), as well as free, cross-platform tools like the Unity game engine, it has become inexpensive and simpler to develop such applications. At Yale’s Tsai Center for Innovative Thinking, for instance, Blended Reality workshops instruct students how to create AR worlds in half an hour, with no code.<sup id="s7"><a href="#7">7</a></sup> Part of the reason building AR (and VR) has become easier is because modern tools abstract away the technical difficulties of anchoring perspective, identifying planes, and interfacing with headsets. The bulk of a developer’s time is spent modelling and animating objects. This means that modern AR/VR is closer to an art form than an engineering problem, which takes time to get right for each specimen. </p>
 
 	<p>Having considered these canonical examples, we might consider how AR experiences may integrate with current Peabody exhibits. It is unfortunate that the Peabody is rich with history about the origins of specimens, scientific rivalries and controversies, but there is not enough room to fit all this information onto a few displays. The addition of unique QR-like codes to each display case could allow a smartphone app to serve up any number of 3D specimen models, virtual avatars for guidance, trivia and anecdotal information. A mockup is provided in Figure 2.3.</p>
 	
-	<p>This pop-up information may be curated and refreshed just like physical displays (while arguably consuming less resources), adding an element of dynamism that incentivizes users to keep coming back and try the experience. Used to its full potential, AR can mimic an existing Peabody exhibit that morphs skull to flesh (shown in Figure 2.4), and make the museum’s monumental specimens come alive. Figure 2.5 shows the Natural History Museum of London’s attempt at playing with such resurrection.<sup>8</sup></p>
+	<p>This pop-up information may be curated and refreshed just like physical displays (while arguably consuming less resources), adding an element of dynamism that incentivizes users to keep coming back and try the experience. Used to its full potential, AR can mimic an existing Peabody exhibit that morphs skull to flesh (shown in Figure 2.4), and make the museum’s monumental specimens come alive. Figure 2.5 shows the Natural History Museum of London’s attempt at playing with such resurrection.<sup id="s8"><a href="#8">8</a></sup></p>
 
 	<p>Scientific consensus on how creatures behaved or looked can also change. The pre-21st century conception of dinosaurs—when Brontosaurus was mounted in the Great Hall—was that they dragged their tails on the ground. More recently, it was shown that dinosaurs are closely related to birds and had feathers. Rather than carrying out costly remounts of fragile bones, or commissioning revised illustrations, curators can instead use AR as a medium to showcase the new while preserving the old. </p>
 
 	<h5>Headsets (VR)</h5>
-	<p>Though not all headsets are VR headsets, substantially more resources have been poured into VR over AR headset development.<sup>9</sup> Although AR headsets do exist, such as Google Glass, Microsoft HoloLens and (more recently) Magic Leap One, they are either defunct or not yet available to consumers. In contrast, VR headsets have already been brought to market by manufacturers such as HTC, Oculus, PlayStation and Samsung, and sales are thriving. Prices range from approximately $500 to $1000, although cheaper headsets, like the $20 Google Cardboard, are nothing more than a pair of lenses that make use of a smartphone to power a VR-like experience.<sup>10</sup> Where high-end headsets excel is their ability to render high-quality graphics, reduce game latency and provide more options for interaction, such as with handheld wands. </p>
+	<p>Though not all headsets are VR headsets, substantially more resources have been poured into VR over AR headset development.<sup id="s9"><a href="#9">9</a></sup> Although AR headsets do exist, such as Google Glass, Microsoft HoloLens and (more recently) Magic Leap One, they are either defunct or not yet available to consumers. In contrast, VR headsets have already been brought to market by manufacturers such as HTC, Oculus, PlayStation and Samsung, and sales are thriving. Prices range from approximately $500 to $1000, although cheaper headsets, like the $20 Google Cardboard, are nothing more than a pair of lenses that make use of a smartphone to power a VR-like experience.<sup id="s10"><a href="#10">10</a></sup> Where high-end headsets excel is their ability to render high-quality graphics, reduce game latency and provide more options for interaction, such as with handheld wands. </p>
 
 	<p>All that being said, not many museums provide headsets or encourage patrons to bring their own, and have not developed VR experiences to complement exhibits. This is because of the long standing conception that a controlled environment is needed for a VR experience. Because the virtual world is decoupled from the real, there is a danger that visitors will bump into exhibits and each other. Headsets have also largely remained tethered to powerful computers for processing, further preventing their use in a communal space. </p>
 	
-	<p>However, technological advances can now conceivably allow visitors to freely roam around the museum. This could allow curators the power to build and place alternate realities wherever they see fit. The first such advance is the consistent increase in processing and rendering power and accompanying decrease in component form-factor. The recently released Oculus Quest is a prominent example of necessary components packed straight into the headset, eliminating the need for a tether. The second is innovation in software that interrupts or warps a user’s view to avoid obstacles. The 3D-sensing startup Occipital, for instance, incorporates a special sensor with a generic VR headset.<sup>11</sup> Similar to the LiDAR sensors on self-driving cars, it projects a laser pattern onto the surrounding environment, and presents real-world obstacles as impassable walls in the virtual world, akin to that in Figure 2.6. </p>
+	<p>However, technological advances can now conceivably allow visitors to freely roam around the museum. This could allow curators the power to build and place alternate realities wherever they see fit. The first such advance is the consistent increase in processing and rendering power and accompanying decrease in component form-factor. The recently released Oculus Quest is a prominent example of necessary components packed straight into the headset, eliminating the need for a tether. The second is innovation in software that interrupts or warps a user’s view to avoid obstacles. The 3D-sensing startup Occipital, for instance, incorporates a special sensor with a generic VR headset.<sup id="s11"><a href="#11">11</a></sup> Similar to the LiDAR sensors on self-driving cars, it projects a laser pattern onto the surrounding environment, and presents real-world obstacles as impassable walls in the virtual world, akin to that in Figure 2.6. </p>
 	
-	<p>Other techniques cause users to unknowingly compensate for scene motion by repositioning and/or reorienting themselves, even on the brink of collision. And lastly, in The Void, a VR video game installation discussed further below, a bank of overhead cameras and sensors communicate with users’ headsets to sync a virtual world with a physical one built of plain bricks and foam.<sup>12</sup> With the two worlds in sync, it is possible to easily navigate a shared space, as shown in Figure 2.7. </p>
+	<p>Other techniques cause users to unknowingly compensate for scene motion by repositioning and/or reorienting themselves, even on the brink of collision. And lastly, in The Void, a VR video game installation discussed further below, a bank of overhead cameras and sensors communicate with users’ headsets to sync a virtual world with a physical one built of plain bricks and foam.<sup id="s12"><a href="#12">12</a></sup> With the two worlds in sync, it is possible to easily navigate a shared space, as shown in Figure 2.7. </p>
 
 	<p>These innovations open up new realms for the Peabody. Like smartphone AR technology, the animated renderings of fossils may be communicated to the public, but on a monumental scale. A visitor may be taking a stroll through the quiet, newly-renovated space that houses Zallinger’s Age of Reptiles mural, but after donning a headset, see the room come alive with interacting dinosaurs modelled after the latest research. </p>
 
@@ -116,29 +233,32 @@
 	<h5>Kiosks (AR)</h5>
 	<p>Consumer technology, for all its potential, presents some challenges in a museum space. For a natural history museum like the Peabody, the fossils and specimens on display must remain front-and-center. There is a danger in adopting technology, particularly smartphones, that distracts rather than complements exhibits. Furthermore, adoption rates for AR/VR apps tend to be low. Visitors see little incentive in downloading an app for a single visit except for novelty and when content is seldom refreshed, the apps are swiftly deleted. According to the 2017 Making Spaces Orb team’s discussions with the director of the Smithsonian Arts and Industries Building, only 3% of its visitors downloaded the museum’s app a year from its release.</p>
 	
-	<p>Museums are transforming to meet these challenges. Developing mobile apps, for example, is being seen not as a one-time investment but a continuous endeavor in which new digital content is added and curated—the same treatment given to physical space. Other museums are doing away with the BYOD (bring your own device) trend altogether, and building hardware and spaces that encourage people to put away their phones. At the Smithsonian Museum of Natural History, visitors peer into a screen with their reflection, until the scene comes alive with a Tyrannosaurus rex and a baby Triceratops<sup>13</sup> (Figure 2.8). While some can hold up their phones to the kiosk and experience the AR scene on their own screens, most simply cluster around the reflection and participate in the shared viewing experience. </p>
+	<p>Museums are transforming to meet these challenges. Developing mobile apps, for example, is being seen not as a one-time investment but a continuous endeavor in which new digital content is added and curated—the same treatment given to physical space. Other museums are doing away with the BYOD (bring your own device) trend altogether, and building hardware and spaces that encourage people to put away their phones. At the Smithsonian Museum of Natural History, visitors peer into a screen with their reflection, until the scene comes alive with a Tyrannosaurus rex and a baby Triceratops<sup id="s13"><a href="#13">13</a></sup> (Figure 2.8). While some can hold up their phones to the kiosk and experience the AR scene on their own screens, most simply cluster around the reflection and participate in the shared viewing experience. </p>
 
-	<p>Applied to the Peabody, such interactive kiosks can have great potential. Visitors can learn more about an exhibit, speak to a virtual avatar, play mini-games or uncover Easter eggs. The kiosks can allow visitors to use their phones (with the museum app installed) if they wish. But for those without compatible smartphones, and to incentivize people to stow away their handhelds, kiosks can pair with an inexpensive physical object to allow access to the same content. To give a concrete example, the company Deskfruit manufactures a futuristic, wooden totem with a printed QR-like code that, when scanned, conjures digital items (volcanoes, basketball hoops, flowers) onto a screen<sup>14</sup> (Figure 2.9). Conceivably, such totems may be used to interact with Peabody kiosks, with any digital output rendered to a mounted screen, eliminating the need for a handheld. </p>
+	<p>Applied to the Peabody, such interactive kiosks can have great potential. Visitors can learn more about an exhibit, speak to a virtual avatar, play mini-games or uncover Easter eggs. The kiosks can allow visitors to use their phones (with the museum app installed) if they wish. But for those without compatible smartphones, and to incentivize people to stow away their handhelds, kiosks can pair with an inexpensive physical object to allow access to the same content. To give a concrete example, the company Deskfruit manufactures a futuristic, wooden totem with a printed QR-like code that, when scanned, conjures digital items (volcanoes, basketball hoops, flowers) onto a screen<sup id="s14"><a href="#14">14</a></sup> (Figure 2.9). Conceivably, such totems may be used to interact with Peabody kiosks, with any digital output rendered to a mounted screen, eliminating the need for a handheld. </p>
 
 	<h5>Purpose-built rooms (AR/VR)</h5>
 	<p>Despite the excitement in AR/VR, most museums have elected not to invest in dedicated spaces for immersion. Such rooms can be prohibitively expensive; at their most refined they can utilize a mix of contiguous wall displays, headsets and equipment that vary temperature, sound and light to play with all the senses. </p>
 
 	<p>Though not a museum, the previously mentioned VR installation—The Void—pushes the envelope of such experiences. Patrons are outfitted with a modified Oculus headset and body suit that gives haptic feedback. The physical space is plain—constructed of foam bricks, overhead sprinklers, LED lights, and electric heaters. The space is made to coincide with the virtual simulation, so that when a headset is worn, the player can feel dungeon walls, a rainstorm, the overhead sun and forest fires. A visual is shown in Figure 2.10.</p>
 
-	<p>We can imagine a museum taking advantage of such a space to reconstruct lost historical narratives or present but distant narratives for its patrons. Users could step into a rendering of the Amazon rainforest to appreciate the species diversity, or ancient artifacts could be situated in context, elevating their importance and increasing engagement. The Art Gallery of New South Wales, for instance, cognizant of the threats that looting, climate change and natural disaster pose to heritage and cultural sites, has reconstructed a Tang dynasty cave as a 1:1 scale AR/VR simulation.<sup>15</sup> Patrons step into a dark, open space, and either hold up iPads to the wire-framed wall as if a magnifying glass, or wear a headset for a fully immersive experience (Figure 2.11). 24 infrared cameras communicate with the iPads, and a bank of computers renders the real-time view with the Unity game engine. </p>
+	<p>We can imagine a museum taking advantage of such a space to reconstruct lost historical narratives or present but distant narratives for its patrons. Users could step into a rendering of the Amazon rainforest to appreciate the species diversity, or ancient artifacts could be situated in context, elevating their importance and increasing engagement. The Art Gallery of New South Wales, for instance, cognizant of the threats that looting, climate change and natural disaster pose to heritage and cultural sites, has reconstructed a Tang dynasty cave as a 1:1 scale AR/VR simulation.<sup id="s15"><a href="#15">15</a></sup> Patrons step into a dark, open space, and either hold up iPads to the wire-framed wall as if a magnifying glass, or wear a headset for a fully immersive experience (Figure 2.11). 24 infrared cameras communicate with the iPads, and a bank of computers renders the real-time view with the Unity game engine. </p>
 	
 	<p>Controlled environments open up exciting possibilities. A number of museums have attempted to strengthen the connection between researchers and the public by experimenting with open offices. But these initiatives have had mixed success; the concern is that being ‘put on display’ makes researchers less productive. VR can provide a suitable alternative that lets visitors step into researchers’ shoes. In the Peabody’s case, a purpose-built room may simulate the site of an excavation, the tomb of a mummy or the dangerous Wild West at the time of O.C Marsh’s expeditions. Modular rooms built with lightweight materials and an adjustable overhead scaffoldings of cameras and sensors may allow curators to swap out scenarios quickly, adding to a feeling of dynamism in the renovated museum.</p>
 
 	<h3>Navigation</h3>
 	<p>There is also some potential of AR/VR to assist with navigation through a museum space. Untethered headsets, hypothesized previously, may incorporate turn-by-turn navigation visuals to guide users to their preferred exhibits. The dividends for disabled users (such as those with visual impairments) may be enormous, since the digital interface can fill up the headset’s entire field of view. But until such headsets become a reality, we may attempt to build smartphone and/or totem-enabled AR navigation tools. To give an example, a hypothesized Deskfruit-style totem may be scanned by a smartphone or held under an interactive kiosk to transform into an isometric map (Figure 2.12). The map can pinpoint the visitor’s position (a digital You Are Here), inform about congestion via heatmap, or trace a path across large spaces or multiple floors. </p>
 
-	<p>Few developers are operating in this niche. By and large, any museums experimenting with navigation are using smartphone apps in which they have either built scale models of the exhibit space (such as the Peabody’s David Friend Hall app<sup>16</sup>) or interfaced with Bluetooth beacons to provide turn-by-turn instructions. A notable example is Project Lumin<sup>17</sup> from the Detroit Institute of Art, which uses Google’s Tango framework for indoor tracking and incorporates AR functionality by tracing a path on the floor to the desired exhibit (Figure 2.13).</p>
+	<p>Few developers are operating in this niche. By and large, any museums experimenting with navigation are using smartphone apps in which they have either built scale models of the exhibit space (such as the Peabody’s David Friend Hall app<sup id="s16"><a href="#16">16</a></sup>) or interfaced with Bluetooth beacons to provide turn-by-turn instructions. A notable example is Project Lumin<sup id="s17"><a href="#17">17</a></sup> from the Detroit Institute of Art, which uses Google’s Tango framework for indoor tracking and incorporates AR functionality by tracing a path on the floor to the desired exhibit (Figure 2.13).</p>
 	
 	<h3>Conclusion</h3>
 	<p>AR/VR technologies are developing rapidly, and each iteration of smartphone tools, headsets or specialized spaces provides novel opportunities for the Peabody to explore, but their use is not without challenges. In addition to the cost and effort required to craft and curate AR/VR experiences, museums must take care that they do not distract from the physical exhibits—the stars of the show. Any use of these technologies must attempt to intensify displays’ salience and make them come alive.</p>
 
-	<h2 id="navigation">Navigation Technology</h2>
-
+	<div class="section">
+		<h2 id="navigation">Navigation Technology</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
+	
 	<h3>Types of Localization Technologies</h3>
 	<p>Traditionally, there are three types of indoor localization systems:</p>
 	<ol>
@@ -208,46 +328,53 @@
 	<p>Combining Bluetooth beacons and their audio tour guide, SFMOMA developed a smart audio app guide that customizes the narrative based on the user’s location and preference. The app can also acts as a voice direction wayfinding tool that helps the user navigate around the museum without pulling out their phones.</p>
 	<p>Implementing the same idea, in the Hall of Connecticut Birds, a handheld audio device could play different bird calls based on the visitors location and velocity. In addition, there are researchers at the Peabody Museum that study the sound of the bird’s wings. Incorporating location-based sound system in the Hall of Connecticut Birds may be an innovative way to showcase ongoing science at the museum.</p>
 
-	<h2 id="accessibility">Accessibility</h2>
+	<div class="section">
+		<h2 id="accessibility">Accessibility</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
+
 	<p>While the newest technology could enhance museum experiences to exciting realms we could only dream of in the past, it is always important to think about how all different types of visitors can not only access but also enjoy the same exhibitions. Museums can be spaces to learn, to relax, and to hang out with family and friends, and they provide opportunities that should be available to people with physical, mental, and developmental disabilities. Not only are there common practices to make museum content accessible, there are also new technologies and various programming specifically designed to improve the experiences of visitors with disabilities. </p>
 
 	<h3>Architectural Features</h3>
-	<p>The Americans with Disabilities Act of 1990 legally requires museums, which count as a public accomodation, to be accessible to all visitors, as a failure to allow individuals access to the space is considered discrimination.<sup>18 19</sup> The aspect of accessibility most often addressed is that to do with wheelchair users.<sup>20</sup> Like most buildings open to the public, the Peabody Museum has ramps and elevators,(See Fig. 4.1) providing access to all parts of the building to wheelchair users.<sup>21</sup> In addition, the Peabody has a small number of wheelchairs to rent free of charge. These features not only benefit those with physical disabilities, but also older adults who may find stairs difficult to use. </p>
+	<p>The Americans with Disabilities Act of 1990 legally requires museums, which count as a public accomodation, to be accessible to all visitors, as a failure to allow individuals access to the space is considered discrimination.<sup id="s18"><a href="#18">18</a> <a href="#19">19</a></sup> The aspect of accessibility most often addressed is that to do with wheelchair users.<sup id="s20"><a href="#20">20</a></sup> Like most buildings open to the public, the Peabody Museum has ramps and elevators,(See Fig. 4.1) providing access to all parts of the building to wheelchair users.<sup id="s21"><a href="#21">21</a></sup> In addition, the Peabody has a small number of wheelchairs to rent free of charge. These features not only benefit those with physical disabilities, but also older adults who may find stairs difficult to use. </p>
 
-	<p>Considering the fact that the Peabody’s current structure, which was constructed in 1925,<sup>22</sup> was not originally built with these visitors in mind, it has done well to provide resources for wheelchair users. However, accessibility programs at other museums have more creative ways to accommodate physically disabled visitors. Many of these spaces were specifically built to have a universal design, a design that benefits all people whether they have disabilities or not.<sup>23</sup> The Smithsonian Institution exhibit excellent examples of universal design. In her article “Universal Design and the Museum,” Dr. Aimi Hamraie analyzes “America on the Move,” a transportation exhibit at National Museum of American History. She points out the universal design features are “seamlessly integrated into the design of the exhibit that you will not notice them unless you know what you are looking for.” These include subtle ramps leading into various transportation vehicles on display, removed seating from the same vehicles to allow enough space to enter, and wheelchair space in the front row of the theater.(See Fig. 4.2) In addition, museum displays and interactive elements are placed at a height and angle that gives access to wheelchair users and young children as well. These features do not intrude on the experience of other visitors and may benefit them, too. </p>
+	<p>Considering the fact that the Peabody’s current structure, which was constructed in 1925,<sup id="s22"><a href="#22">22</a></sup> was not originally built with these visitors in mind, it has done well to provide resources for wheelchair users. However, accessibility programs at other museums have more creative ways to accommodate physically disabled visitors. Many of these spaces were specifically built to have a universal design, a design that benefits all people whether they have disabilities or not.<sup id="s23"><a href="#23">23</a></sup> The Smithsonian Institution exhibit excellent examples of universal design. In her article “Universal Design and the Museum,” Dr. Aimi Hamraie analyzes “America on the Move,” a transportation exhibit at National Museum of American History. She points out the universal design features are “seamlessly integrated into the design of the exhibit that you will not notice them unless you know what you are looking for.” These include subtle ramps leading into various transportation vehicles on display, removed seating from the same vehicles to allow enough space to enter, and wheelchair space in the front row of the theater.(See Fig. 4.2) In addition, museum displays and interactive elements are placed at a height and angle that gives access to wheelchair users and young children as well. These features do not intrude on the experience of other visitors and may benefit them, too. </p>
 
 	<p>With the Peabody’s new renovation, there are many opportunities to rethink how the space is designed for every visitor. Additionally, with more dynamic exhibit spaces, it is increasingly important to actively consider the concept of universal design. </p>
 	
 	<h3>Navigational Tools</h3>	
 	<p>As mentioned in previous sections, recent technology provides many new and exciting possibilities for maps and navigation tools. This, along with a few older methods, can greatly benefit those with disabilities or those who do not read the language of the museum. Conventionally, most museums have wall-mounted maps and directional signs. Some provide paper maps and guides, which allow for variation when temporary exhibits change or special events occur. These maps are usually created with the average visitor in mind. However, there are a few good examples of how navigational tools are made more accessible. </p>
 
-	<p>While many museums mark wheelchair accessible entrances and routes on their main map, The Smithsonian Institution offers a variety of separate maps online to download and print or to pick up at information desks.<sup>24</sup> These include an accessibility map that detail wheelchair accessible entrances, curb cuts, paved walkways, and designated parking spots around each museum<sup>25</sup> and wheelchair and scooter rental information within and around the museums. This is most likely due to the fact that the Smithsonian Institution includes multiple separate museums. Even so, providing maps and resources specifically designed to aid people with physical disabilities can make them less cluttered with information and easier to use. </p>
+	<p>While many museums mark wheelchair accessible entrances and routes on their main map, The Smithsonian Institution offers a variety of separate maps online to download and print or to pick up at information desks.<sup id="s24"><a href="#24">24</a></sup> These include an accessibility map that detail wheelchair accessible entrances, curb cuts, paved walkways, and designated parking spots around each museum<sup id="s25"><a href="#25">25</a></sup> and wheelchair and scooter rental information within and around the museums. This is most likely due to the fact that the Smithsonian Institution includes multiple separate museums. Even so, providing maps and resources specifically designed to aid people with physical disabilities can make them less cluttered with information and easier to use. </p>
 
-	<p>Museums like the Metropolitan Museum of Art provide maps and guides in many other languages. By doing so, these museums include audiences from a variety of places and cultures. Two years ago, after its rebrand, the Met released a new set of maps.(See Fig. 4.3) Along with this, they focussed on creating and equally accessible digital version using Living Map’s software, which is similar to Google Maps and uses text labels separate from the map image.<sup>26</sup> Using this technology, the Met’s digital map is not only much more user-friendly with multiple zoom levels, but also can provide translations to other languages in a much easier and more dynamic way. </p>
+	<p>Museums like the Metropolitan Museum of Art provide maps and guides in many other languages. By doing so, these museums include audiences from a variety of places and cultures. Two years ago, after its rebrand, the Met released a new set of maps.(See Fig. 4.3) Along with this, they focussed on creating and equally accessible digital version using Living Map’s software, which is similar to Google Maps and uses text labels separate from the map image.<sup id="s26"><a href="#26">26</a></sup> Using this technology, the Met’s digital map is not only much more user-friendly with multiple zoom levels, but also can provide translations to other languages in a much easier and more dynamic way. </p>
 
-	<p>In addition to navigation tools for wheelchair users and multilingual visitors, the Smithsonian and many large museums across the globe also offer braille or large print maps and guides for blind or partially sighted visitors.<sup>27</sup> These not only can help these visitors navigate the museum space, but also can often provide information about the exhibit that they would not be able to read from labels on the wall. Some museums such as the Science Museum, London and the National Air & Space Museum<sup>28</sup> even offer tactile maps,(See Fig. 4.4) in which the walls and exhibit spaces are marked with raised or textured lines and areas that can be understood through touch. Companies such as TacMap and Touch Graphics specialize in making this type of map, which can be handheld, wall-mounted, or placed a kiosk. </p>
+	<p>In addition to navigation tools for wheelchair users and multilingual visitors, the Smithsonian and many large museums across the globe also offer braille or large print maps and guides for blind or partially sighted visitors.<sup id="s27"><a href="#27">27</a></sup> These not only can help these visitors navigate the museum space, but also can often provide information about the exhibit that they would not be able to read from labels on the wall. Some museums such as the Science Museum, London and the National Air & Space Museum<sup id="s28"><a href="#28">28</a></sup> even offer tactile maps,(See Fig. 4.4) in which the walls and exhibit spaces are marked with raised or textured lines and areas that can be understood through touch. Companies such as TacMap and Touch Graphics specialize in making this type of map, which can be handheld, wall-mounted, or placed a kiosk. </p>
 
 	<p>Earlier mentioned location based navigation tools using bluetooth beacons, such as the Orb, have great potential to incorporate various accessibility features. According to one of its creators, Lance Chantiles-Wertz, the Orb has the ability to personalize information such as prefered language and wheelchair use. This information can be used in conjunction with audio directions to provide useful navigation to all different types of visitors. </p>
 
 	<h3>Advanced Technologies for Assisted Navigation</h3>
-	<p>Other new technologies can also be combined with these navigation tools to help visitors with disabilities. Companies such as Microsoft have used computer vision, infrared sensors, and AI image analysis to build devices that can help blind and partially sighted individuals navigate their surroundings.<sup>29</sup> These devices analyze the environment and use synthesized speech, different sounds,<sup>30</sup> or haptic feedback<sup>31</sup> to direct the user. Researchers have developed a variety ways to haptically communicate directions. At Yale, Dr. Adam Spiers of the GRAB Lab developed a cube-shaped handheld device that gave turn-by-turn navigation directions by rotating and extending.(See Fig. 4.5)<sup>32</sup> The technology used in these types of devices could be used in museums as well.</p>
+	<p>Other new technologies can also be combined with these navigation tools to help visitors with disabilities. Companies such as Microsoft have used computer vision, infrared sensors, and AI image analysis to build devices that can help blind and partially sighted individuals navigate their surroundings.<sup id="s29"><a href="#29">29</a></sup> These devices analyze the environment and use synthesized speech, different sounds,<sup id="s30"><a href="#30">30</a></sup> or haptic feedback<sup id="s31"><a href="#31">31</a></sup> to direct the user. Researchers have developed a variety ways to haptically communicate directions. At Yale, Dr. Adam Spiers of the GRAB Lab developed a cube-shaped handheld device that gave turn-by-turn navigation directions by rotating and extending.(See Fig. 4.5)<sup id="s32"><a href="#32">32</a></sup> The technology used in these types of devices could be used in museums as well.</p>
 
 	<p>In a museum setting, where the layout is known and relatively stable, there is little need for environment analysis. Using location-based technology such as bluetooth beacons, blind or partially sighted visitors could be given spoken or haptic directions in response to their position in the museum. These directions not only help these particular visitors, but also can potentially guide sighted visitors to increase the level of engagement with the physical collections. </p>
 
 	<h3>Audio Guides</h3>
-	<p>Audio guides are a relatively common feature for museums; the Peabody already has a high-quality, well-produced tour.<sup>33</sup> These guides have great potential in allowing blind or partially sighted visitors to enjoy and engage with the collections. These audio tours could be marked with braille labels on the exhibits or on a braille handheld guide.(See Fig. 4.6) Even better, location-based technology such as bluetooth beacons are being used to determine the correct audio clip to play in front of certain items. As previously mentioned,<sup>34</sup> the SFMOMA uses an app like this.<sup>35 36</sup> This guide is designed to keep screens away while looking at the museum’s collection, but is perfect to help blind and partially sighted visitors use the audio guides as well. </p>
+	<p>Audio guides are a relatively common feature for museums; the Peabody already has a high-quality, well-produced tour.<sup id="s33"><a href="#33">33</a></sup> These guides have great potential in allowing blind or partially sighted visitors to enjoy and engage with the collections. These audio tours could be marked with braille labels on the exhibits or on a braille handheld guide.(See Fig. 4.6) Even better, location-based technology such as bluetooth beacons are being used to determine the correct audio clip to play in front of certain items. As previously mentioned,<sup id="s34"><a href="#34">34</a></sup> the SFMOMA uses an app like this.<sup id="s35"><a href="#35">35</a> <a href="#36">36</a></sup> This guide is designed to keep screens away while looking at the museum’s collection, but is perfect to help blind and partially sighted visitors use the audio guides as well. </p>
 
-	<p>Though there are many benefits of a good audio tour, it is important to consider how deaf, hard-of-hearing, or non-English speakers can use them. Transcripts and technology supporting assistive listening devices should be provided alongside the audio tours. Translated tours or transcripts should also be provided if resources allow. The Met offers audio tours in English, French, German, Italian, Japanese, Korean, Mandarin, Portuguese, Russian, and Spanish,<sup>37</sup> and continues to expand the quality and coverage of their foreign language tours.<sup>38</sup> This could be a worthwhile investment for the Peabody to include more types of visitors. </p>
+	<p>Though there are many benefits of a good audio tour, it is important to consider how deaf, hard-of-hearing, or non-English speakers can use them. Transcripts and technology supporting assistive listening devices should be provided alongside the audio tours. Translated tours or transcripts should also be provided if resources allow. The Met offers audio tours in English, French, German, Italian, Japanese, Korean, Mandarin, Portuguese, Russian, and Spanish,<sup id="s37"><a href="#37">37</a></sup> and continues to expand the quality and coverage of their foreign language tours.<sup id="s38"><a href="#38">38</a></sup> This could be a worthwhile investment for the Peabody to include more types of visitors. </p>
 
 	<h3>Special Programming</h3>
-	<p>Similarly to audio guides, special tours and programming specifically geared toward certain audiences can significantly enhance a museum visit. Art museums and galleries like Uffizi Gallery and the MoMA provide verbal description and touch tours for blind and partially sighted visitors.<sup>39 40</sup> These tours involve a sighted guide describing every detail in the art, from the subject to the background to the texture of the paint and to the color of each element. For the touch tours, visitors may touch certain sculptures with gloves on, as well as tactile images renderings of and three-dimensional renderings of various paintings.(See Fig. 4.7) These techniques could be easily adopted by the Peabody Museum by adding more touchable items and three-dimensional models. In fact, there is already a small-scale implementation of touchable models in the Human Origins exhibit, where there are brass skulls available to visitors. Considering the Peabody’s large volume of detailed scans of its artifacts, 3D printing and casting durable models is certainly feasible, and is already being done for use inside of exhibits. Not only would expanding these offerings to a tactile implementation be beneficial to blind or partially sighted individuals, but it would also be an exciting interactive element for children and other visitors in general. </p>
+	<p>Similarly to audio guides, special tours and programming specifically geared toward certain audiences can significantly enhance a museum visit. Art museums and galleries like Uffizi Gallery and the MoMA provide verbal description and touch tours for blind and partially sighted visitors.<sup id="s39"><a href="#39">39</a> <a href="#40">40</a></sup> These tours involve a sighted guide describing every detail in the art, from the subject to the background to the texture of the paint and to the color of each element. For the touch tours, visitors may touch certain sculptures with gloves on, as well as tactile images renderings of and three-dimensional renderings of various paintings.(See Fig. 4.7) These techniques could be easily adopted by the Peabody Museum by adding more touchable items and three-dimensional models. In fact, there is already a small-scale implementation of touchable models in the Human Origins exhibit, where there are brass skulls available to visitors. Considering the Peabody’s large volume of detailed scans of its artifacts, 3D printing and casting durable models is certainly feasible, and is already being done for use inside of exhibits. Not only would expanding these offerings to a tactile implementation be beneficial to blind or partially sighted individuals, but it would also be an exciting interactive element for children and other visitors in general. </p>
 
-	<p>For deaf or hard-of-hearing visitors, many museums provide sign-language tours. The Museum of Fine Arts, Boston also provides a mobile guide with a recorded video sign-language tour, which is equivalent to an audio guide made accessible to deaf visitors.<sup>41</sup> Programs such as these are important to allow visitors with disabilities to feel welcome and included and to have a meaningful visit. </p>
+	<p>For deaf or hard-of-hearing visitors, many museums provide sign-language tours. The Museum of Fine Arts, Boston also provides a mobile guide with a recorded video sign-language tour, which is equivalent to an audio guide made accessible to deaf visitors.<sup id="s41"><a href="#41">41</a></sup> Programs such as these are important to allow visitors with disabilities to feel welcome and included and to have a meaningful visit. </p>
 
 	<h3>Conclusion</h3>
 	<p>Accessibility is complex but extremely important to think about with regards to museum experience. There are many tools, old and new, that could be used by the Peabody to be more inclusive and engaging to multiple different types of audiences. With the Peabody renovation and the opportunity for new interactive technology, it is essential that we think about the museum’s use by all visitors.</p>
 
-	<h2 id="conclusion">Conclusion</h2>
+	<div class="section">
+		<h2 id="conclusion">Conclusion</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
 
 	<p>As the Peabody explores new ideas during its renovation planning, we aim to provide a broad overview of techniques, technologies and tools that can assist visitors navigate around museum space and increase interactivity with exhibits. Our findings were split across four dimensions:</p>
 
@@ -261,52 +388,60 @@
 
 	<p>The intent was not necessarily to prescribe radical changes to the Peabody as it embarks on its renovation. Rather, it was to explore the realm of possibilities and take inspiration from museums, installations, companies, and creators that are working on memorable experiences with their use of modern technologies. Whichever of these many paths it decides to pursue, careful analysis is needed to ensure the proposed technologies are used in a manner consistent with the Peabody’s mission and values.</p>
 
-	<h2 id="notes">Notes</h2>
+	<div class="section">
+		<h2 id="notes">Notes</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
+
 	<ol>
-		<li>Yale Peabody Museum of Natural History, “Discovery Room.”</li>
-		<li> “Ideum Multitouch Tables, Touch Screens, and Exhibit Displays.”</li>
-		<li> Spadaccini and McDonald. “The Evolution of Tangible User Interfaces on Touch Tables: New Frontiers in UI & UX Design.”</li>
-		<li> Space for Life, “Exo: Our Search for Life in the Universe.” </li>
-		<li> Visix, “Digital Signage Software | E-Paper Room Signs.”</li>
-		<li> “Rise AR: The UK’s Leading Augmented Reality Development Company.”</li>
-		<li> “Welcome | Blended Reality: Applied Research Project.”</li>
-		<li> Ailsa Barry et al., “Augmented Reality in a Public Space: The Natural History Museum, London.” </li>
-		<li> Coie, “2018 Augmented and Virtual Reality Survey Results.”</li>
-		<li> “Get Cardboard – Google VR.”</li>
-		<li> Sra, “Asymmetric Design Approach and Collision Avoidance Techniques For Room-Scale Multiplayer Virtual Reality.”</li>
-		<li> “The VOID.”</li>
-		<li> Smithsonian Institution, “Walk Among Dinosaurs! Augmented Reality Experience.” </li>
-		<li> “Deskfruit.”</li>
-		<li> “Pure Land :: Tang :: Art Gallery NSW.”</li>
-		<li> “David Friend Hall App | Yale Students : Yale Peabody Museum of Natural History.”</li>
-		<li> “Lumin.”</li>
-		<li> Americans With Disabilities Act of 1990.</li>
-		<li> United States Department of Justice Civil Rights Division, “Expanding Your Market: Maintaining Accessibility in Museums.”</li>
-		<li> Yale Peabody Museum of Natural History, “Admission & Hours.” </li>
-		<li> Yale Peabody Museum of Natural History, “Admission & Hours.” </li>
-		<li> Peabody Museum, Yale School of Management Case Study, “A Museum of Objects and Ideas.” </li>
-		<li> “What is Universal Design.”</li>
-		<li> The Smithsonian Institution, “About the Accessibility Program.”</li>
-		<li> Please view at https://www.si.edu/content/ovs/accessmapsindd.pdf</li>
-		<li> Tallon, “The Future of Mapping and Wayfinding at The Met.”</li>
-		<li> The Smithsonian Institution, “Accessibility for Visitors.”</li>
-		<li> “National Air & Space Museum – Udvar-Hazy Center Audio-Tactile Museum Guide.”</li>
-		<li> Pivothead, “Seeing AI Project.”</li>
-		<li> De Borba Campos, Márcia, et al. “Mobile Navigation through a Science Museum for Users Who Are Blind.”</li>
-		<li> MIT CSAIL. “Wearable Blind Navigation.”</li>
-		<li> The GRAB Lab, “Shape Changing Haptic Navigation Interfaces.”</li>
-		<li> Yale Peabody Museum of Natural History, “Audio Tour.” </li>
-		<li> See Navigation Technology: Applications: Navigation and Sound.</li>
-		<li> “The SFMOMA Audio App.”</li>
-		<li> Chun, “The SFMOMA’s New App Will Forever Change How You Enjoy Museums.”</li>
-		<li> Metropolitan Museum of Art, “Audio Guide.”</li>
-		<li> Tung, “Improving the Audio Guide: A Look at Our Visitors.”</li>
-		<li> “The Uffizi by Touch Tour.”</li>
-		<li> MoMA, “Individuals who are blind or partially sighted.”</li>
-		<li> “ASL Tours at the Museum of Fine Arts, Boston.”</li>
+		<li id="1">Yale Peabody Museum of Natural History, “Discovery Room.”<a href="#s1" class="top"> BACK</a></li>
+		<li id="2"> “Ideum Multitouch Tables, Touch Screens, and Exhibit Displays.”<a href="#s2" class="top"> BACK</a></li>
+		<li id="3"> Spadaccini and McDonald. “The Evolution of Tangible User Interfaces on Touch Tables: New Frontiers in UI & UX Design.”<a href="#s3" class="top"> BACK</a></li>
+		<li id="4"> Space for Life, “Exo: Our Search for Life in the Universe.” <a href="#s4" class="top"> BACK</a></li>
+		<li id="5"> Visix, “Digital Signage Software | E-Paper Room Signs.”<a href="#s5" class="top"> BACK</a></li>
+		<li id="6"> “Rise AR: The UK’s Leading Augmented Reality Development Company.”<a href="#s6" class="top"> BACK</a></li>
+		<li id="7"> “Welcome | Blended Reality: Applied Research Project.”<a href="#s7" class="top"> BACK</a></li>
+		<li id="8"> Ailsa Barry et al., “Augmented Reality in a Public Space: The Natural History Museum, London.” <a href="#s8" class="top"> BACK</a></li>
+		<li id="9"> Coie, “2018 Augmented and Virtual Reality Survey Results.”<a href="#s9" class="top"> BACK</a></li>
+		<li id="10"> “Get Cardboard – Google VR.”<a href="#s10" class="top"> BACK</a></li>
+		<li id="11"> Sra, “Asymmetric Design Approach and Collision Avoidance Techniques For Room-Scale Multiplayer Virtual Reality.”<a href="#s11" class="top"> BACK</a></li>
+		<li id="12"> “The VOID.”<a href="#s12" class="top"> BACK</a></li>
+		<li id="13"> Smithsonian Institution, “Walk Among Dinosaurs! Augmented Reality Experience.” <a href="#s13" class="top"> BACK</a></li>
+		<li id="14"> “Deskfruit.”<a href="#s14" class="top"> BACK</a></li>
+		<li id="15"> “Pure Land :: Tang :: Art Gallery NSW.”<a href="#s15" class="top"> BACK</a></li>
+		<li id="16"> “David Friend Hall App | Yale Students : Yale Peabody Museum of Natural History.”<a href="#s16" class="top"> BACK</a></li>
+		<li id="17"> “Lumin.”<a href="#s17" class="top"> BACK</a></li>
+		<li id="18"> Americans With Disabilities Act of 1990.<a href="#s18" class="top"> BACK</a></li>
+		<li id="19"> United States Department of Justice Civil Rights Division, “Expanding Your Market: Maintaining Accessibility in Museums.”<a href="#s18" class="top"> BACK</a></li>
+		<li id="20"> Yale Peabody Museum of Natural History, “Admission & Hours.” <a href="#s20" class="top"> BACK</a></li>
+		<li id="21"> Yale Peabody Museum of Natural History, “Admission & Hours.” <a href="#s21" class="top"> BACK</a></li>
+		<li id="22"> Peabody Museum, Yale School of Management Case Study, “A Museum of Objects and Ideas.” <a href="#s22" class="top"> BACK</a></li>
+		<li id="23"> “What is Universal Design.”<a href="#s23" class="top"> BACK</a></li>
+		<li id="24"> The Smithsonian Institution, “About the Accessibility Program.”<a href="#s24" class="top"> BACK</a></li>
+		<li id="25"> Please view at https://www.si.edu/content/ovs/accessmapsindd.pdf<a href="#s25" class="top"> BACK</a></li>
+		<li id="26"> Tallon, “The Future of Mapping and Wayfinding at The Met.”<a href="#s26" class="top"> BACK</a></li>
+		<li id="27"> The Smithsonian Institution, “Accessibility for Visitors.”<a href="#s27" class="top"> BACK</a></li>
+		<li id="28"> “National Air & Space Museum – Udvar-Hazy Center Audio-Tactile Museum Guide.”<a href="#s28" class="top"> BACK</a></li>
+		<li id="29"> Pivothead, “Seeing AI Project.”<a href="#s29" class="top"> BACK</a></li>
+		<li id="30"> De Borba Campos, Márcia, et al. “Mobile Navigation through a Science Museum for Users Who Are Blind.”<a href="#s30" class="top"> BACK</a></li>
+		<li id="31"> MIT CSAIL. “Wearable Blind Navigation.”<a href="#s31" class="top"> BACK</a></li>
+		<li id="32"> The GRAB Lab, “Shape Changing Haptic Navigation Interfaces.”<a href="#s32" class="top"> BACK</a></li>
+		<li id="33"> Yale Peabody Museum of Natural History, “Audio Tour.” <a href="#s33" class="top"> BACK</a></li>
+		<li id="34"> See Navigation Technology: Applications: Navigation and Sound.<a href="#s34" class="top"> BACK</a></li>
+		<li id="35"> “The SFMOMA Audio App.”<a href="#s35" class="top"> BACK</a></li>
+		<li id="36"> Chun, “The SFMOMA’s New App Will Forever Change How You Enjoy Museums.”<a href="#s35" class="top"> BACK</a></li>
+		<li id="37"> Metropolitan Museum of Art, “Audio Guide.”<a href="#s37" class="top"> BACK</a></li>
+		<li id="38"> Tung, “Improving the Audio Guide: A Look at Our Visitors.”<a href="#s38" class="top"> BACK</a></li>
+		<li id="39"> “The Uffizi by Touch Tour.”<a href="#s39" class="top"> BACK</a></li>
+		<li id="40"> MoMA, “Individuals who are blind or partially sighted.”<a href="#s39" class="top"> BACK</a></li>
+		<li id="41"> “ASL Tours at the Museum of Fine Arts, Boston.”<a href="#s41" class="top"> BACK</a></li>
 	</ol>
 
-	<h2 id="works-cited">Works Cited</h2>
+	<div class="section">
+		<h2 id="works-cited">Works Cited</h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
+
 	<p>"A Short Comparison of BLE Hardware for Commercial Use." <i>IT Craft.</i> Accessed September 29, 2018. https://itechcraft.com/ibeacon-development/comparison-of-ble-hardware.</p>
 
 	<p><i>Americans With Disabilities Act of 1990.</i> Public Law 101-336. 108th Congress, 2nd session (July 26, 1990).</p>
@@ -391,6 +526,8 @@
 
 	<p>Yale School of Management. <i>Peabody Museum: Imagining the Future of the Yale Peabody Museum of Natural History.</i> Last modified February 09, 2018. http://vol11.cases.som.yale.edu/peabody-museum.</p>
 
-	<p>Zafari, Faheen. et. al., "A Survey of Indoor Localization Systems and Technologies." March 14, 2018. https://arxiv.org/pdf/1709.01015.pdf.
+	<p>Zafari, Faheen. et. al., "A Survey of Indoor Localization Systems and Technologies." March 14, 2018. https://arxiv.org/pdf/1709.01015.pdf.</p>
+
+	<br>
 </body>
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="writing-style2.css">
+	</style>
+</head>
+<body id="container">
+	<h6>Navigation and Visitor Interactions: Best Practices, Tools, and Technologies</h6>
+	<h6>ENAS410/ARCH390: Making Spaces, Assignment 4</h6>
+	<h6>Sarim Abbas, Antonio Cao, Julia Ma, Evan Smith</h6>
+
+	<h2>Navigation Technology</h2>
+	
+	<h3>Types of Localization Technologies</h3>
+	<p>Traditionally, there are three types of indoor localization systems:</p>
+	<ol>
+		<li><b>Networked-based systems:</b> localization systems based on a network of beacons, such as WIFI routers or Bluetooth beacons. These systems typically use the information of the wireless signals to estimate the position of a target carrying a wireless device.</li>
+		<li><b>Inertial-based system:</b> localization systems that use built-in sensors, such as accelerometers and cameras in a phone, to measure the motion of a target and estimate its position relative to the starting point.</li>
+		<li><b>Hybrid:</b> localization systems that combine both network-based systems and inertial-based systems to measure the position of the target. </li>
+	</ol>
+
+	<p>After receiving measurement signals, these navigation systems use a variety of methods to calculate the position of a target. There are four main categories of localization algorithms: </p>
+	<ol>
+		<li><b>Simultaneous localization and mapping (SLAM):</b> SLAM is a type of algorithm that enables a measurement unit (typically a mobile robot) to generate a map of its surroundings and its position in this map at the same time. This method assumes that, as a measurement unit repeatedly passes by a set of features, it is possible use these features as referencing points, based on which an algorithm can update the position estimate. In particular, the algorithm takes in sensor measurements, predicts the expected position and sensor measurement, compares the predicted measurements with the actual measurements, and uses the error to update the position prediction algorithm. </li>
+		<li>
+			<b>Range-based algorithms:</b>
+			<ol>
+				<li>Time of flight: the algorithm measures the propagation time of a signal between the transmitter and the receiver, and uses time divided by the speed of signal to estimate the distance between the transmitter and the receiver.</li>
+				<li>Angle based algorithms: the algorithm measures the angle of arrival of a signal, and uses triangulation methods to calculate the position of the receiver.</li>
+			</ol>
+		</li>
+		<li><b>Received signal strength:</b> the algorithm measures the received signal strength between a transmitter and a beacon, and estimates the distance between the two based on the fact that signals attenuate as they travel over distances. </li>
+		<li>
+			<b>Range-free:</b>
+			<ol>
+				<li>Proximity: the algorithm checks if the user’s device is connected to any beacons in the network, and, based on this connectivity data, infers the position of the user. (See Fig. 3.1)</li>
+				<li>Fingerprinting: the algorithm measures signals received by the beacon network and compares the received data with sample measurements in the database, and selects the position recorded in the database that best matches the received signals. (See Fig. 3.2)</li>
+			</ol>
+		</li>
+	</ol>
+
+	<h3>Widely-Used Localization Technologies</h3>
+	<h4>WiFi </h4>
+	<p>WiFi-based localization systems use the ranged-based algorithms, the received signal strength, and the fingerprinting algorithm to calculate the distance between a user’s device and a WiFi router.</p>
+
+	<p>The main advantages of WiFi localization system are wide-reception range, low cost of material, low energy consumption, and device availability. In particular, almost every mobile phone is equipped with WiFi connection, and thus the visitors to a museum do not have to carry extra devices on them to enjoy WiFi-based navigation technology.</p>
+	
+	<p>The main disadvantages of WiFi localization system are installation difficulty, poor distance measurement accuracy, and requirement of complex signal processing algorithms. It typically takes an entire research team to build a reliable WiFi-based localization system, and it is very hard to guarantee consistent measurements over time, because the system is highly sensitive to environmental errors. These drawbacks limit the application of WiFi localization system in most public spaces.</p>
+
+	<p>For example, in 2013, the Orlando Airport tried to implement a WiFi-based localization system to help travelers navigate and offer location-based notifications. Unfortunately, a test in 2014 showed that a WiFi location measurement could be 30 to 50 feet off of an individual’s actual location because of the varying signal strength in a chaotic public space. Due to this large inaccuracy, the airport decided not to use the WiFi-based localization and switched to Bluetooth beacons instead.</p>
+
+	<h4>Bluetooth beacons</h4>
+	<p>Similar to WiFi-based localization systems, most Bluetooth beacons also rely on received signal strength or proximity to calculate the relative distance from mobile phones to mobile beacons. Typically, each Bluetooth beacon in a network classifies a phone in immediate, far, and unknown regions, and the intersection of these regions is the estimated location of the phone.</p>
+	
+	<p>The main advantage of Bluetooth beacons are large reception range, low energy consumption, relatively low cost, and device availability. Similar to WiFi-based systems, Bluetooth beacons are accessible to all major smart devices, but unlike WiFi-based systems, Bluetooth beacons require much lower cost to install, since there are lots of matured Bluetooth products custom-designed to serve localization purposes. Moreover, the state-of-the-art Bluetooth protocol, the Bluetooth 5.0, supports the “Bluetooth Mesh,” which can host over 300,000 mobile devices at the same time. These functionalities of Bluetooth beacons allow the Royal Botanic Gardens, which receives about 1.3 million visitors annually, to push location-based information to the users. </p>
+	
+	<p>In terms of cost, the benefit of Bluetooth technology is evident in the comparison of its cost to Wifi: the WiFi campaign cost $8136 and the Bluetooth campaign cost $199, which is over 40 times cheaper.(See Fig. 3.3) On the other hand, Bluetooth beacons also has several disadvantages; Bluetooth beacons have low localization accuracy (the error is typically more than 1 meter), the system is prone to noise, and deployment and maintenance is costly due to the system’s sensitivity to noise.</p>
+	
+	<h4>NFC</h4>
+	<p>Evolved from RFID, the Near-Field-Communication technology operates as a wireless data transfer protocol that detects and then enables technology in close proximity to communicate without the need for an internet connection. For localization purposes, the NFC can act as a proximity sensor to track the user’s location at discrete intervals. Many museums and amusement parks have used NFC technology to enhance the visitor experience. For instance, the Cooper-Hewitt Pen uses NFC chips to save exhibition data that the user is interested in, and the Disney Magic Band uses NFC technology to unlock the door of the user’s hotel room and send photos to the user’s account.</p>
+	
+	<p>The main advantages of NFC are low device cost and installation cost. However, they have some major disadvantages that make them undesirable for most localization purposes. First, as tags for localization, NFC chips have a small range of detection, which makes it difficult to measure a user’s movement in space accurately. Second, unlike WiFi and Bluetooth, which is already supported by most smartphones, NFC technology requires the user to approach the chip in close proximity. This can discourage the user to interact with the technology, and for this reason, major manufacturers like Apple have already moved away from NFC.</p>
+
+	<h3>Practical Considerations of Bluetooth Beacons</h3>
+	<p>Since the Peabody Museum has planned to use Bluetooth beacons as its main localization technology, it is worthwhile to delve into the details of the usage, accuracy, battery life, and maintenance issues of this specific technology. As an overview, please see Fig. 3.4, a table that compares the most popular Bluetooth beacons in the market.</p>
+
+	<p>Of all these products, the three most widely used ones are Estimote, Gimbal Series 10, and Kontakt. Both the Estimote beacon and the Kontakt beacon contain a 1,000 mAh battery that can last about 21 months. However, the battery inside the Estimote beacon cannot be replaced, which means that when the beacon is broken, a new one has to be purchased. The Gimbal Series 10, a cheaper alternative, has a shorter battery life of about 1 month. The same manufacturer also manufactures a larger version called the Gimbal Series 21 that can last about 16 months. Battery life is an important factor because, in a museum setting, replacing the batteries inside dozens of Bluetooth beacons is a very time-consuming task.</p>
+
+	<p>Other processes in maintenance include firmware and software updates, regular re-calibration of devices, and physical inspection of the beacons. Devices that have outstanding customer support services will bring a lot of benefits during this process. According to customer reviews and online support forums, the company behind the Estimote beacon responds to customer reports most efficiently and frequently, and this factor partly explains why most large museums like the Metropolitan Museum of Art and the Guggenheim Museum are using Estimote in their spaces.</p>
+
+	<p>Despite their effectiveness, Bluetooth beacons in general still suffer from several hurdles in practical applications. According to a research by Rover Labs in April 2015, only 40% of users in the United States across all devices report using Bluetooth. Moreover, though it is possible to push location-based notifications to users without requiring them to download an app, the data is often inaccurate and the functionalities are very limited. To unleash the full advantages of Bluetooth beacon technology, it is necessary, albeit very difficult, for users to install a custom app on their phones. In short, user acceptance is still a serious issue for Bluetooth beacon.</p>
+	
+	<h3>Applications</h3>
+	<p>Magic happens when location data and motion sensors merge with other forms of interaction. Recently, designers, inventors, and scientists have fused these technologies to demonstrate the wondrous future of visitor interaction that engages all human senses.</p>
+
+	<h4>Navigation and Light</h4>
+	<p>Using mediation headbands, motion sensors, and projection mapping technology, artist Nick Verstand created an installation that envelops a visitor inside a light curtain that vibrates based on the visitor’s mental state.(See Fig. 3.5) Likewise, Japanese design studio TeamLab created a room full of LED panels and projected screens that surrounded the visitors inside a giant vortex that swirled around relative to the visitor’s motion.(See Fig. 3.6) Using similar technologies, the Peabody Museum could create a projection mapped evolutionary tree that grows as the visitor traverses through the Hall of Human Origins or transports the visitor into a panoramic New England farmland from the Southern New England Dioramas.</p>
+	
+	<h4>Navigation and Sound</h4>
+	<p>Combining Bluetooth beacons and their audio tour guide, SFMOMA developed a smart audio app guide that customizes the narrative based on the user’s location and preference. The app can also acts as a voice direction wayfinding tool that helps the user navigate around the museum without pulling out their phones.</p>
+	<p>Implementing the same idea, in the Hall of Connecticut Birds, a handheld audio device could play different bird calls based on the visitors location and velocity. In addition, there are researchers at the Peabody Museum that study the sound of the bird’s wings. Incorporating location-based sound system in the Hall of Connecticut Birds may be an innovative way to showcase ongoing science at the museum.</p>
+
+	<br>
+	<a class="next" href="writing-style2-vr-ar.html">BACK</a><br>
+	<a class="next" href="writing-style2-accessibility.html">NEXT</a><br>
+	<a class="next" href="writing-style2-contents.html">CONTENTS</a>
+
+</body>
+</html>
