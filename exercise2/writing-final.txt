@@ -1,7 +1,8 @@
-<a href="#2"><div id="1">Navigation</div></a>
-<a href="#3"><div id="2">and</div></a>
-<a href="#4"><div id="3">Visitor</div></a>
-<a href="#5"><div id="4">Interactions:  Best</div></a>
+<a href="#1"><div id="0">Navigation</div></a>
+<a href="#2"><div id="1">and</div></a>
+<a href="#3"><div id="2">Visitor</div></a>
+<a href="#4"><div id="3">Interactions:</div></a>
+<a href="#5"><div id="4">Best</div></a>
 <a href="#6"><div id="5">Practices,</div></a>
 <a href="#7"><div id="6">Tools,</div></a>
 <a href="#8"><div id="7">and</div></a>
