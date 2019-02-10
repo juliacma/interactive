@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="writing-style2.css">
+	</style>
+</head>
+<body id="container">
+	<h6>Navigation and Visitor Interactions: Best Practices, Tools, and Technologies</h6>
+	<h6>ENAS410/ARCH390: Making Spaces, Assignment 4</h6>
+	<h6>Sarim Abbas, Antonio Cao, Julia Ma, Evan Smith</h6>
+
+	<h2>Virtual Reality and Augmented Reality</h2>
+
+	<p>Discussions on museums adapting modern technologies would not be complete without referencing Virtual Reality (VR) and Augmented Reality (AR). These technologies have been in use by museums at least as early as 2010, but it is only within the last five years that the advent of lighter, cheaper headsets, tools and software have unlocked the promise of these technologies.</p>
+
+	<p>VR refers to a purely simulated or virtual environment. Whether by donning a headset or stepping into a simulated space, the reality shown is distinct from the real world. On the other hand, AR techniques ‘augment’ the world around us, for instance by melding it with virtual objects. Both AR and VR have the ability to alter our perception of the world. Cognisant of the Peabody’s needs and challenges, this discussion will consider use cases for:</p>
+
+	<ol>
+		<li>Adding interactivity to exhibits </li>
+		<li>Navigating through the museum space</li>
+	</ol>
+
+	<p>For each use case, it will reference AR and VR solutions that tend to fall into (often a mix of) two categories:</p>
+	<ol>
+		<li>
+			Consumer technology
+			<ol>
+				<li>Smartphones</li>
+				<li>Special hardware e.g. headsets </li>
+			</ol>
+		</li>
+		<li>Immersive spaces</li>
+	</ol>
+
+	<h3>Exhibit interaction</h3>
+	<p>The <i>Night at the Museum</i> franchise played with the idea of museums come to life. There is something exciting and immensely educational about an exhibit (such as a Neanderthal), volunteering a first-hand account of its life and experience. AR/VR can bring us ever closer to such a fantasy, transforming static exhibits to dynamic ones.</p>
+
+	<h4>Consumer technology</h4>
+	<h5>Smartphones (AR)</h5>
+	<p>Figures 2.1 and 2.2 are representative examples of consumer AR experiences offered in museums today. The first figure shows a proof-of-concept by the UK-based company, RiseAR.<sup id="s6"><a href="writing-style2-notes.html#6">6</a></sup> When a special code (similar to a QR code) is viewed through a smartphone camera, the encased specimen appears as a high-resolution 3D model, which can be freely magnified or rotated. The motivation behind the AR app is to encourage visitors to closely inspect the physical characteristics of a specimen as it lived. </p>
+
+	<p>The second figure—somewhat related—shows visitors at the Natural History Museum, London looking through their screens at an animated dinosaur model. The animation communicates aspects about dinosaur appearance and behavior that is inadequately described by fossils and illustrations alone. In contrast to a video playing on a flat screen, the AR experience lets viewers walk ‘around’ the specimen and focus on parts they want to see. The experience is packaged into an app so that visitors can use their personal devices, but for those without smartphones, a limited number of museum iPads are available for use.</p>
+
+	<p>Just five years ago, developing such interactions would have been time-consuming and expensive, requiring proprietary tools or experimental open-source software. Today, with the advent of ARKit and ARCore (available on the iOS and Android platforms respectively), as well as free, cross-platform tools like the Unity game engine, it has become inexpensive and simpler to develop such applications. At Yale’s Tsai Center for Innovative Thinking, for instance, Blended Reality workshops instruct students how to create AR worlds in half an hour, with no code.<sup id="s7"><a href="writing-style2-notes.html#7">7</a></sup> Part of the reason building AR (and VR) has become easier is because modern tools abstract away the technical difficulties of anchoring perspective, identifying planes, and interfacing with headsets. The bulk of a developer’s time is spent modelling and animating objects. This means that modern AR/VR is closer to an art form than an engineering problem, which takes time to get right for each specimen. </p>
+
+	<p>Having considered these canonical examples, we might consider how AR experiences may integrate with current Peabody exhibits. It is unfortunate that the Peabody is rich with history about the origins of specimens, scientific rivalries and controversies, but there is not enough room to fit all this information onto a few displays. The addition of unique QR-like codes to each display case could allow a smartphone app to serve up any number of 3D specimen models, virtual avatars for guidance, trivia and anecdotal information. A mockup is provided in Figure 2.3.</p>
+	
+	<p>This pop-up information may be curated and refreshed just like physical displays (while arguably consuming less resources), adding an element of dynamism that incentivizes users to keep coming back and try the experience. Used to its full potential, AR can mimic an existing Peabody exhibit that morphs skull to flesh (shown in Figure 2.4), and make the museum’s monumental specimens come alive. Figure 2.5 shows the Natural History Museum of London’s attempt at playing with such resurrection.<sup id="s8"><a href="writing-style2-notes.html#8">8</a></sup></p>
+
+	<p>Scientific consensus on how creatures behaved or looked can also change. The pre-21st century conception of dinosaurs—when Brontosaurus was mounted in the Great Hall—was that they dragged their tails on the ground. More recently, it was shown that dinosaurs are closely related to birds and had feathers. Rather than carrying out costly remounts of fragile bones, or commissioning revised illustrations, curators can instead use AR as a medium to showcase the new while preserving the old. </p>
+
+	<h5>Headsets (VR)</h5>
+	<p>Though not all headsets are VR headsets, substantially more resources have been poured into VR over AR headset development.<sup id="s9"><a href="writing-style2-notes.html#9">9</a></sup> Although AR headsets do exist, such as Google Glass, Microsoft HoloLens and (more recently) Magic Leap One, they are either defunct or not yet available to consumers. In contrast, VR headsets have already been brought to market by manufacturers such as HTC, Oculus, PlayStation and Samsung, and sales are thriving. Prices range from approximately $500 to $1000, although cheaper headsets, like the $20 Google Cardboard, are nothing more than a pair of lenses that make use of a smartphone to power a VR-like experience.<sup id="s10"><a href="writing-style2-notes.html#10">10</a></sup> Where high-end headsets excel is their ability to render high-quality graphics, reduce game latency and provide more options for interaction, such as with handheld wands. </p>
+
+	<p>All that being said, not many museums provide headsets or encourage patrons to bring their own, and have not developed VR experiences to complement exhibits. This is because of the long standing conception that a controlled environment is needed for a VR experience. Because the virtual world is decoupled from the real, there is a danger that visitors will bump into exhibits and each other. Headsets have also largely remained tethered to powerful computers for processing, further preventing their use in a communal space. </p>
+	
+	<p>However, technological advances can now conceivably allow visitors to freely roam around the museum. This could allow curators the power to build and place alternate realities wherever they see fit. The first such advance is the consistent increase in processing and rendering power and accompanying decrease in component form-factor. The recently released Oculus Quest is a prominent example of necessary components packed straight into the headset, eliminating the need for a tether. The second is innovation in software that interrupts or warps a user’s view to avoid obstacles. The 3D-sensing startup Occipital, for instance, incorporates a special sensor with a generic VR headset.<sup id="s11"><a href="writing-style2-notes.html#11">11</a></sup> Similar to the LiDAR sensors on self-driving cars, it projects a laser pattern onto the surrounding environment, and presents real-world obstacles as impassable walls in the virtual world, akin to that in Figure 2.6. </p>
+	
+	<p>Other techniques cause users to unknowingly compensate for scene motion by repositioning and/or reorienting themselves, even on the brink of collision. And lastly, in The Void, a VR video game installation discussed further below, a bank of overhead cameras and sensors communicate with users’ headsets to sync a virtual world with a physical one built of plain bricks and foam.<sup id="s12"><a href="writing-style2-notes.html#12">12</a></sup> With the two worlds in sync, it is possible to easily navigate a shared space, as shown in Figure 2.7. </p>
+
+	<p>These innovations open up new realms for the Peabody. Like smartphone AR technology, the animated renderings of fossils may be communicated to the public, but on a monumental scale. A visitor may be taking a stroll through the quiet, newly-renovated space that houses Zallinger’s Age of Reptiles mural, but after donning a headset, see the room come alive with interacting dinosaurs modelled after the latest research. </p>
+
+	<h4>Immersive spaces</h4>
+	<h5>Kiosks (AR)</h5>
+	<p>Consumer technology, for all its potential, presents some challenges in a museum space. For a natural history museum like the Peabody, the fossils and specimens on display must remain front-and-center. There is a danger in adopting technology, particularly smartphones, that distracts rather than complements exhibits. Furthermore, adoption rates for AR/VR apps tend to be low. Visitors see little incentive in downloading an app for a single visit except for novelty and when content is seldom refreshed, the apps are swiftly deleted. According to the 2017 Making Spaces Orb team’s discussions with the director of the Smithsonian Arts and Industries Building, only 3% of its visitors downloaded the museum’s app a year from its release.</p>
+	
+	<p>Museums are transforming to meet these challenges. Developing mobile apps, for example, is being seen not as a one-time investment but a continuous endeavor in which new digital content is added and curated—the same treatment given to physical space. Other museums are doing away with the BYOD (bring your own device) trend altogether, and building hardware and spaces that encourage people to put away their phones. At the Smithsonian Museum of Natural History, visitors peer into a screen with their reflection, until the scene comes alive with a Tyrannosaurus rex and a baby Triceratops<sup id="s13"><a href="writing-style2-notes.html#13">13</a></sup> (Figure 2.8). While some can hold up their phones to the kiosk and experience the AR scene on their own screens, most simply cluster around the reflection and participate in the shared viewing experience. </p>
+
+	<p>Applied to the Peabody, such interactive kiosks can have great potential. Visitors can learn more about an exhibit, speak to a virtual avatar, play mini-games or uncover Easter eggs. The kiosks can allow visitors to use their phones (with the museum app installed) if they wish. But for those without compatible smartphones, and to incentivize people to stow away their handhelds, kiosks can pair with an inexpensive physical object to allow access to the same content. To give a concrete example, the company Deskfruit manufactures a futuristic, wooden totem with a printed QR-like code that, when scanned, conjures digital items (volcanoes, basketball hoops, flowers) onto a screen<sup id="s14"><a href="writing-style2-notes.html#14">14</a></sup> (Figure 2.9). Conceivably, such totems may be used to interact with Peabody kiosks, with any digital output rendered to a mounted screen, eliminating the need for a handheld. </p>
+
+	<h5>Purpose-built rooms (AR/VR)</h5>
+	<p>Despite the excitement in AR/VR, most museums have elected not to invest in dedicated spaces for immersion. Such rooms can be prohibitively expensive; at their most refined they can utilize a mix of contiguous wall displays, headsets and equipment that vary temperature, sound and light to play with all the senses. </p>
+
+	<p>Though not a museum, the previously mentioned VR installation—The Void—pushes the envelope of such experiences. Patrons are outfitted with a modified Oculus headset and body suit that gives haptic feedback. The physical space is plain—constructed of foam bricks, overhead sprinklers, LED lights, and electric heaters. The space is made to coincide with the virtual simulation, so that when a headset is worn, the player can feel dungeon walls, a rainstorm, the overhead sun and forest fires. A visual is shown in Figure 2.10.</p>
+
+	<p>We can imagine a museum taking advantage of such a space to reconstruct lost historical narratives or present but distant narratives for its patrons. Users could step into a rendering of the Amazon rainforest to appreciate the species diversity, or ancient artifacts could be situated in context, elevating their importance and increasing engagement. The Art Gallery of New South Wales, for instance, cognizant of the threats that looting, climate change and natural disaster pose to heritage and cultural sites, has reconstructed a Tang dynasty cave as a 1:1 scale AR/VR simulation.<sup id="s15"><a href="writing-style2-notes.html#15">15</a></sup> Patrons step into a dark, open space, and either hold up iPads to the wire-framed wall as if a magnifying glass, or wear a headset for a fully immersive experience (Figure 2.11). 24 infrared cameras communicate with the iPads, and a bank of computers renders the real-time view with the Unity game engine. </p>
+	
+	<p>Controlled environments open up exciting possibilities. A number of museums have attempted to strengthen the connection between researchers and the public by experimenting with open offices. But these initiatives have had mixed success; the concern is that being ‘put on display’ makes researchers less productive. VR can provide a suitable alternative that lets visitors step into researchers’ shoes. In the Peabody’s case, a purpose-built room may simulate the site of an excavation, the tomb of a mummy or the dangerous Wild West at the time of O.C Marsh’s expeditions. Modular rooms built with lightweight materials and an adjustable overhead scaffoldings of cameras and sensors may allow curators to swap out scenarios quickly, adding to a feeling of dynamism in the renovated museum.</p>
+
+	<h3>Navigation</h3>
+	<p>There is also some potential of AR/VR to assist with navigation through a museum space. Untethered headsets, hypothesized previously, may incorporate turn-by-turn navigation visuals to guide users to their preferred exhibits. The dividends for disabled users (such as those with visual impairments) may be enormous, since the digital interface can fill up the headset’s entire field of view. But until such headsets become a reality, we may attempt to build smartphone and/or totem-enabled AR navigation tools. To give an example, a hypothesized Deskfruit-style totem may be scanned by a smartphone or held under an interactive kiosk to transform into an isometric map (Figure 2.12). The map can pinpoint the visitor’s position (a digital You Are Here), inform about congestion via heatmap, or trace a path across large spaces or multiple floors. </p>
+
+	<p>Few developers are operating in this niche. By and large, any museums experimenting with navigation are using smartphone apps in which they have either built scale models of the exhibit space (such as the Peabody’s David Friend Hall app<sup id="s16"><a href="writing-style2-notes.html#16">16</a></sup>) or interfaced with Bluetooth beacons to provide turn-by-turn instructions. A notable example is Project Lumin<sup id="s17"><a href="writing-style2-notes.html#17">17</a></sup> from the Detroit Institute of Art, which uses Google’s Tango framework for indoor tracking and incorporates AR functionality by tracing a path on the floor to the desired exhibit (Figure 2.13).</p>
+	
+	<h3>Conclusion</h3>
+	<p>AR/VR technologies are developing rapidly, and each iteration of smartphone tools, headsets or specialized spaces provides novel opportunities for the Peabody to explore, but their use is not without challenges. In addition to the cost and effort required to craft and curate AR/VR experiences, museums must take care that they do not distract from the physical exhibits—the stars of the show. Any use of these technologies must attempt to intensify displays’ salience and make them come alive.</p>
+
+	<br>
+	<a class="next" href="writing-style2-screens.html">BACK</a><br>
+	<a class="next" href="writing-style2-navigation.html">NEXT</a><br>
+	<a class="next" href="writing-style2-contents.html">CONTENTS</a>
+
+</body>
+</html>
