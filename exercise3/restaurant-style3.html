@@ -14,7 +14,7 @@
 		/* BASE */
 
 		body {  
-			font-size:calc(10px + .4vw);
+			font-size:12px;
 			line-height: 1.1;
 		 	font-family: Helvetica Neue, Helvetica, sans-serif;
 			font-weight: normal;
@@ -28,41 +28,46 @@
 			color: black;
 		}
 
-		p, h3 {
+		p {
 			margin: 0;
+			font-size: .85em;
 		}
 
 		h3 {
+			margin: 0;
 			margin-bottom: 5px;
 		}
 
 		/* CONTENT */
 		.main {
 			min-height: calc(100% - 13px);
+			border: 1px solid hotpink;
+			margin: 0;
+			padding: 5px;
 		}
 
 		.grid {
 			display: grid;
-			grid-template-columns: minmax(15%, 33%) minmax(min-content, 34%) minmax(min-content, 33%);
-			border: 1px solid lightblue;
-			margin: 0;
-			padding: 5px;
+			grid-template-columns: auto auto auto;
 			grid-gap: 5px;
+			background-color: rgba(255, 100, 50, .4);
 		}
 
 		.header {
 			grid-column-start: 1;
 			grid-column-end: 4;
-			border: 1px solid lightblue;
+			border: 1px dotted white;
 			margin: 0;
 			padding: 5px;
+			background-color: rgba(255, 100, 50, .4)
 		}
 
 		.grid div {
-			font-size: .95em;
-			border: 1px solid lightblue;
+			/*font-size: .95em;*/
+			border: 1px dotted white;
 			margin: 0;
 			padding: 5px;
+			background-color: rgba(255, 100, 50, .4)
 		}
 
 		.tall {
@@ -70,9 +75,9 @@
 			grid-row-end: 5;
 		}
 
-		/*@media (max-width: 1120px) {
+		@media (max-width: 1120px) {
 			.grid{
-				grid-template-columns: minmax(min-content, 50%) minmax(min-content, 50%);
+				grid-template-columns: auto auto;
 			}
 			.header {
 				grid-column-end: 3;
@@ -82,7 +87,7 @@
 				grid-row-end: auto;
 			}
 		}
-		*/
+		
 
 	</style>
 </head>
@@ -93,29 +98,29 @@
 		<div class="grid tall second">
 			<h2 class="header">Signature Bowls</h2>
 
-			<div class="header">
-				<h3>Hawaiian</h3>
-				<p>Wild caught ahi tuna, sweet onions & cilantro tossed in spicy mayo, topped with masago, green onions shreeded nori & crispy onions</p>
+			<div class="header grid">
+				<h3 class="header">Hawaiian</h3>
+				<p class="header">Wild caught ahi tuna, sweet onions & cilantro tossed in spicy mayo, topped with masago, green onions shreeded nori & crispy onions</p>
 			</div>
 
-			<div class="header">
-				<h3>Miso Salmon</h3>
-				<p>Salmon, sweet onions, diced mangoes & cilantro tossed in creamy miso, topped with garlic chips</p>
+			<div class="header grid">
+				<h3 class="header">Miso Salmon</h3>
+				<p class="header">Salmon, sweet onions, diced mangoes & cilantro tossed in creamy miso, topped with garlic chips</p>
 			</div>
 
-			<div class="header">
-				<h3>Sweet & Spicy Shrimp</h3>
-				<p>Shrimp, corn, cilantro, jalapeños & sweet onions tossed in chili garlic oil, topped with wonton crisps</p>
+			<div class="header grid">
+				<h3 class="header">Sweet & Spicy Shrimp</h3>
+				<p class="header">Shrimp, corn, cilantro, jalapeños & sweet onions tossed in chili garlic oil, topped with wonton crisps</p>
 			</div>
 
-			<div class="header">
-				<h3>Pokemoto Tofu</h3>
-				<p>Organic tofu, sweet onions & edamame tossed pokémoto chojang topped with green onions toasted rice puffs & sesame seeds</p>
+			<div class="header grid">
+				<h3 class="header">Pokemoto Tofu</h3>
+				<p class="header">Organic tofu, sweet onions & edamame tossed pokémoto chojang topped with green onions toasted rice puffs & sesame seeds</p>
 			</div>
 
-			<div class="header">
-				<h3>Seseame Ginger Chicken</h3>
-				<p>Chicken, sweet onions & shredded carrots  tossed in sesame ginger, topped with avocado, cashews & tempura flakes</p>
+			<div class="header grid">
+				<h3 class="header">Seseame Ginger Chicken</h3>
+				<p class="header">Chicken, sweet onions & shredded carrots  tossed in sesame ginger, topped with avocado, cashews & tempura flakes</p>
 			</div>
 		</div>
 				
@@ -125,15 +130,23 @@
 			<div class="grid">
 				<h3 class="header">1 Your Base</h3>
 
-				<div>🍚</div>
-				<div>🌯</div>
-				<div>🥗</div>
-				<div>poké bowl</div>
-				<div>poké burrito</div>
-				<div>poké salad</div>
-				<div>sushi rice or brown rice</div>
-				<div>sushi rice with <br>roasted seaweed</div>
-				<div>mixed greens <br>or romaine</div>
+				<div class="grid">
+					<div class="header">🍚</div>
+					<div class="header">poké bowl</div>
+					<div class="header">sushi rice or brown rice</div>
+				</div>
+
+				<div class="grid">
+					<div class="header">🌯</div>
+					<div class="header">poké burrito</div>
+					<div class="header">sushi rice with <br>roasted seaweed</div>
+				</div>
+
+				<div class="grid">
+					<div class="header">🥗</div>
+					<div class="header">poké salad</div>
+					<div class="header">mixed greens <br>or romaine</div>
+				</div>
 
 			</div>
 
@@ -206,25 +219,40 @@
 		</div>
 		<div class="grid second">	
 			<h2 class="header">Sides</h2>
-			<div>housemade miso soup</div>
-			<div>dole whip</div>
-			<div>dole whip float</div>
-			<div>$2.50</div>
-			<div>$3.95</div>
-			<div>$4.95</div>
+			<div class="grid">
+				<div class="header">housemade miso soup</div>
+				<div class="header">$2.50</div>
+			</div>
+			<div class="grid">
+				<div class="header">dole whip</div>
+				<div class="header">$3.95</div>
+			</div>
 
-			<div class="header">A hawaiian favorite, available in pineapple and a ratating selection of flavors</div>
+			<div class="grid">
+				<div class="header">dole whip float</div>
+				<div class="header">$4.95</div>
+			</div>
+
+			<p class="header">A hawaiian favorite, available in pineapple and a ratating selection of flavors</p>
 			
 		</div>	
 		<div class="grid second">
 			<h2 class="header">Contact Us</h2>
-			<div><a href="https://www.facebook.com/pokemotoco">facebook</a></div>
-			<div><a href="https://www.instagram.com/pokemoto_">instagram</a></div>
-			<div><a href="http://www.pokemoto.com">website</a></div>
-			<div><a href="https://www.facebook.com/pokemotoco">pokemotoco</a></div>
-			<div><a href="https://www.instagram.com/pokemoto_">pokemoto_</a></div>
-			<div><a href="http://www.pokemoto.com">www.pokemoto.com</a></div>
-			<div class="header">*Consuming raw or undercooked meats, poultry, seafood, shellfish, and eggs may increase your risk of foodborne illness.*</div>
+			<div class="grid">
+				<div class="header"><a href="https://www.facebook.com/pokemotoco">facebook</a></div>
+				<div class="header"><a href="https://www.facebook.com/pokemotoco">pokemotoco</a></div>
+			</div>
+
+			<div class="grid">
+				<div class="header"><a href="https://www.instagram.com/pokemoto_">instagram</a></div>
+				<div class="header"><a href="http://www.pokemoto.com">website</a></div>
+			</div>
+
+			<div class="grid">
+				<div class="header"><a href="https://www.instagram.com/pokemoto_">pokemoto_</a></div>
+				<div class="header"><a href="http://www.pokemoto.com">www.pokemoto.com</a></div>
+			</div>
+			<p class="header">*Consuming raw or undercooked meats, poultry, seafood, shellfish, and eggs may increase your risk of foodborne illness.*</p>
 		</div>
 	</div>
 </body>

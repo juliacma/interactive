@@ -42,14 +42,14 @@ i, em {
 	font-style: italic;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: ff-real-headline-pro, Helvetica, Arial, sans-serif;
 	font-weight: 600;
 	font-style: normal;
 	letter-spacing: .01em;
 }
 
-h2 {
+h2, h3 {
 	margin-bottom: .3em;
 }
 
