@@ -13,242 +13,219 @@
 
 		/* BASE */
 
-		body {
-		  font-size: 100px;
-		  line-height: 1.1;
-		  letter-spacing: -3px;
-		  font-family: Helvetica Neue, Helvetica, sans-serif;
-		  font-weight: normal;
-		  text-rendering: optimizeLegibility;
-		  color: white;
-		  text-align: center;
-		  padding: 0;
-		  margin: 0;
-		}
-
-		#container {
-            background-size: 200px 200px;
-            background-image: url("../assets/salmon.gif");
-            background-color: rgba(250, 128, 114,.9);
-            background-blend-mode: lighten;
-            padding: 30px;
-        }
-
-		p, h1, h2, h3, h4, h5, h6 {
-			font-size: 1em;
-			margin:0;
+		body {  
+			font-size:calc(10px + .4vw);
+			line-height: 1.1;
+		 	font-family: Helvetica Neue, Helvetica, sans-serif;
+			font-weight: normal;
+			text-rendering: optimizeLegibility;
+			padding: 0;
+			margin: 0;
 		}
 
 		a {
-		  text-decoration: none;
-		  color: white;
+			text-decoration: none;
+			color: black;
 		}
 
-		a:hover {
-		  text-decoration: none;
-		  color: white;
+		p, h3 {
+			margin: 0;
 		}
 
-		a:active { color: white; }
-		a:visited { color: white; }
-
-		hr {
-		  margin: 15px -10px 10px -10px;
-		  border: 0;
-		  border-bottom: 20px solid white;
-		  /*border-style: dotted;*/
-		  border-image: url("../assets/salmon-border.png") 20% repeat;
-		}
-
-		hr.one {
-			border-bottom-width: 100px;
-		}
-
-		hr.two {
-			border-bottom-width: 50px;
+		h3 {
+			margin-bottom: 5px;
 		}
 
 		/* CONTENT */
-
-		#frame {
-			height: calc(100vh - 40px);
-			width: calc(100vw - 40px);
-			position: fixed;
-			border: 20px solid white;
+		.main {
+			min-height: calc(100% - 13px);
 		}
 
-		.space {
-			height: 25px;
-		}	
+		.grid {
+			display: grid;
+			grid-template-columns: minmax(15%, 33%) minmax(min-content, 34%) minmax(min-content, 33%);
+			border: 1px solid lightblue;
+			margin: 0;
+			padding: 5px;
+			grid-gap: 5px;
+		}
+
+		.header {
+			grid-column-start: 1;
+			grid-column-end: 4;
+			border: 1px solid lightblue;
+			margin: 0;
+			padding: 5px;
+		}
+
+		.grid div {
+			font-size: .95em;
+			border: 1px solid lightblue;
+			margin: 0;
+			padding: 5px;
+		}
+
+		.tall {
+			grid-row-start: 3;
+			grid-row-end: 5;
+		}
+
+		/*@media (max-width: 1120px) {
+			.grid{
+				grid-template-columns: minmax(min-content, 50%) minmax(min-content, 50%);
+			}
+			.header {
+				grid-column-end: 3;
+			}
+			.tall {
+				grid-row-start: auto;
+				grid-row-end: auto;
+			}
+		}
+		*/
 
 	</style>
 </head>
 <body>
-	<div id="frame"></div>
-	<div id="container">
-		<h1><a href="http://www.pokemoto.com">pokémoto™</a></h1>
-		<h2>hawaiian poké</h2>
-		<hr class="one">
-	
-		<div>
-			<h2>signature bowls</h2>
+	<div class="grid main">
+		<h1 class="header"><a href="http://www.pokemoto.com">Pokémoto™</a></h1>
+		<h2 class="header">Hawaiian Poké 🐟</h2>
+		<div class="grid tall second">
+			<h2 class="header">Signature Bowls</h2>
 
-			<hr class="two">
-
-			<h3>hawaiian</h3>
-			<p>wild caught ahi tuna, sweet onions & cilantro tossed in spicy mayo, topped with masago, green onions shreeded nori & crispy onions</p>
-
-			<hr>
-
-			<h3>miso salmon</h3>
-			<p>salmon, sweet onions, diced mangoes & cilantro tossed in creamy miso, topped with garlic chips</p>
-
-			<hr>
-
-			<h3>sweet & spicy shrimp</h3>
-			<p>shrimp, corn, cilantro, jalapeños & sweet onions tossed in chili garlic oil, topped with wonton crisps</p>
-
-			<hr>
-
-			<h3>pokemoto tofu</h3>
-			<p>organic tofu, sweet onions & edamame tossed pokémoto chojang topped with green onions toasted rice puffs & sesame seeds</p>
-
-			<hr>
-
-			<h3>seseame ginger chicken</h3>
-			<p>chicken, sweet onions & shredded carrots  tossed in sesame ginger, topped with avocado, cashews & tempura flakes</p>
-		</div>
-		<hr class="one">
-		<div>
-			<h2>build your poke</h2>
-
-			<hr class="two">
-			
-			<h3>1 your base</h3>
-			
-			<p>poké bowl</p>
-			<p>(sushi rice or brown rice)</p>
-
-			<p>poké burrito</p>
-			<p>(sushi rice with <br>roasted seaweed)</p>
-		
-			<p>poké salad</p>
-			<p>(mixed greens <br>or romaine)</p>
-		
-
-			<hr>
-
-			<h3>2 your protein</h3>
-
-			<p>ahi tuna (wild caught)</p>
-			<p>salmon</p>
-			
-			<p>chicken</p>
-			<p>shrimp</p>
-			<p>organic tofu</p>
-
-			<hr>
-
-			<h3>3 your mix-ins</h3>
-
-			<p>sweet onions</p>
-			<p>cucumber</p>
-			<p>cilantro</p>
-	
-			<p>mandarin oranges</p>
-			<p>chopped mangoes</p>
-			<p>fresh jalapeños</p>
-		
-			<p>edamame</p>
-			<p>hijiki seaweed</p>
-			<p>ogo seaweed</p>
-				
-			<hr>
-
-			<h3>4 your flavor</h3>
-	
-			<p>pokémoto chojang</p>
-			<p>himalayan salt</p>
-			<p>chili garlic oil</p>
-		
-			<p>ponzu fresh</p>
-			<p>creamy miso</p>
-			<p>umami shoyu</p>
-		
-			<p>spicy mayo</p>
-			<p>sesame ginger</p>
-			<p>wasabi aioli</p>
-				
-			<hr>
-
-			<h3>5 your toppings</h3>
-
-			<p>avocado (+add'l)</p>
-			<p>green onions</p>
-			<p>masago</p>
-			<p>black caviar tobiko +$1</p>
-		
-			<p>seaweed salad</p>
-			<p>pickled ginger</p>
-			<p>pickled daikon</p>
-			<p>shredded carrots</p>
-			<p>shredded nori</p>
-		
-			<p>sesame seeds</p>
-			<p>kani salad</p>
-			<p>furikake</p>
-			<p>wasabi</p>
-			<p>cabbage slaw</p>
-				
-			<hr>
-
-			<h3>6 your crunch</h3>
-			
-			
-			<p>garlic chips</p>
-			<p>crispy onions</p>
-		
-			<p>toasted rice puffs</p>
-			<p>roasted cashews</p>
-	
-			<p>wonton crisps</p>
-			<p>tempura flakes</p>
-				
-		</div>
-		<hr class="one">
-		<h2>restaurant info</h2>
-		<hr class="two">
-		<div>	
-			<h2>sides</h2>
-			<p>housemade miso soup: $2.50</p>
-			<p>dole whip*: $3.95</p>
-			<p>dole whip float: $4.95</p>
-			<div class="space"></div>
-			<p>*a hawaiian favorite, available in pineapple and a ratating selection of flavors</p>
-		</div>
-		<hr class="one">
-		<a href="https://www.facebook.com/pokemotoco">
-			<div class="link-box">
-				<b>facebook</b>
-				<p>pokemotoco</p>
+			<div class="header">
+				<h3>Hawaiian</h3>
+				<p>Wild caught ahi tuna, sweet onions & cilantro tossed in spicy mayo, topped with masago, green onions shreeded nori & crispy onions</p>
 			</div>
-		</a>
-		<hr>
-		<a href="https://www.instagram.com/pokemoto_">
-			<div class="link-box">
-				<b>instagram</b>
-				<p>pokemoto_</p>
+
+			<div class="header">
+				<h3>Miso Salmon</h3>
+				<p>Salmon, sweet onions, diced mangoes & cilantro tossed in creamy miso, topped with garlic chips</p>
 			</div>
-		</a>
-		<hr>
-		<p>*consuming raw or undercooked meats, poultry, seafood, shellfish, and eggs may increase your risk of foodborne illness.*</p>
-		<hr class="one">
-		<a href="http://www.pokemoto.com">
-			<div class="link-box">
-				<b>www.pokemoto.com</b>
+
+			<div class="header">
+				<h3>Sweet & Spicy Shrimp</h3>
+				<p>Shrimp, corn, cilantro, jalapeños & sweet onions tossed in chili garlic oil, topped with wonton crisps</p>
 			</div>
-		</a>
-		<hr class="one">
+
+			<div class="header">
+				<h3>Pokemoto Tofu</h3>
+				<p>Organic tofu, sweet onions & edamame tossed pokémoto chojang topped with green onions toasted rice puffs & sesame seeds</p>
+			</div>
+
+			<div class="header">
+				<h3>Seseame Ginger Chicken</h3>
+				<p>Chicken, sweet onions & shredded carrots  tossed in sesame ginger, topped with avocado, cashews & tempura flakes</p>
+			</div>
+		</div>
+				
+		<div class="grid tall second">
+			<h2 class="header">Build Your Poke</h2>
+			
+			<div class="grid">
+				<h3 class="header">1 Your Base</h3>
+
+				<div>🍚</div>
+				<div>🌯</div>
+				<div>🥗</div>
+				<div>poké bowl</div>
+				<div>poké burrito</div>
+				<div>poké salad</div>
+				<div>sushi rice or brown rice</div>
+				<div>sushi rice with <br>roasted seaweed</div>
+				<div>mixed greens <br>or romaine</div>
+
+			</div>
+
+			
+			<div class="grid">
+				<h3 class="header">2 Your Protein</h3>
+
+				<div>ahi tuna (wild caught)</div>
+				<div>salmon</div>
+				<div>chicken</div>
+				<div>shrimp</div>
+				<div>organic tofu</div>
+			</div>
+			
+			<div class="grid">
+				<h3 class="header">3 Your Mix-Ins</h3>
+
+				<div>sweet onions</div>
+				<div>cucumber</div>
+				<div>cilantro</div>
+				<div>mandarin oranges</div>
+				<div>chopped mangoes</div>
+				<div>fresh jalapeños</div>
+				<div>edamame</div>
+				<div>hijiki seaweed</div>
+				<div>ogo seaweed</div>	
+			</div>
+
+			
+			<div class="grid">
+				<h3 class="header">4 Your Flavor</h3>
+				<div>pokémoto chojang</div>
+				<div>himalayan salt</div>
+				<div>chili garlic oil</div>
+				<div>ponzu fresh</div>
+				<div>creamy miso</div>
+				<div>umami shoyu</div>
+				<div>spicy mayo</div>
+				<div>sesame ginger</div>
+				<div>wasabi aioli</div>
+			</div>
+
+			<div class="grid">
+				<h3 class="header">5 Your Toppings</h3>
+				<div>avocado (+add'l)</div>
+				<div>green onions</div>
+				<div>masago</div>
+				<div>black caviar tobiko +$1</div>
+				<div>seaweed salad</div>
+				<div>pickled ginger</div>
+				<div>pickled daikon</div>
+				<div>shredded carrots</div>
+				<div>shredded nori</div>
+				<div>sesame seeds</div>
+				<div>kani salad</div>
+				<div>furikake</div>
+				<div>wasabi</div>
+				<div>cabbage slaw</div>
+			</div>
+
+			<div class="grid">
+				<h3 class="header">6 Your Crunch</h3>
+				<div>garlic chips</div>
+				<div>crispy onions</div>
+				<div>toasted rice puffs</div>
+				<div>roasted cashews</div>
+				<div>wonton crisps</div>
+				<div>tempura flakes</div>
+			</div>
+		</div>
+		<div class="grid second">	
+			<h2 class="header">Sides</h2>
+			<div>housemade miso soup</div>
+			<div>dole whip</div>
+			<div>dole whip float</div>
+			<div>$2.50</div>
+			<div>$3.95</div>
+			<div>$4.95</div>
+
+			<div class="header">A hawaiian favorite, available in pineapple and a ratating selection of flavors</div>
+			
+		</div>	
+		<div class="grid second">
+			<h2 class="header">Contact Us</h2>
+			<div><a href="https://www.facebook.com/pokemotoco">facebook</a></div>
+			<div><a href="https://www.instagram.com/pokemoto_">instagram</a></div>
+			<div><a href="http://www.pokemoto.com">website</a></div>
+			<div><a href="https://www.facebook.com/pokemotoco">pokemotoco</a></div>
+			<div><a href="https://www.instagram.com/pokemoto_">pokemoto_</a></div>
+			<div><a href="http://www.pokemoto.com">www.pokemoto.com</a></div>
+			<div class="header">*Consuming raw or undercooked meats, poultry, seafood, shellfish, and eggs may increase your risk of foodborne illness.*</div>
+		</div>
 	</div>
 </body>
 </html>

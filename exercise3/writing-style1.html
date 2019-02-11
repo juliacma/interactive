@@ -12,12 +12,10 @@
 
 		/* TYPOGRAPHY */
 
-		
-
 		/* BASE */
 
-		body {
-		  font-size: 18px;
+		body {  
+		  font-size:calc(14px + .4vw);
 		  line-height: 1.3;
 		  font-family: Helvetica, sans-serif;
 		  font-weight: 400;
@@ -75,10 +73,21 @@
 
 		a:hover {
 		  text-decoration: none;
+		  background-color: yellow;
+		  font-size: 1.5em;
+		  -webkit-transition: all .1s ease-in-out;
+		    -moz-transition: all .1s ease-in-out;
+		    -o-transition: all .1s ease-in-out;
+		    -ms-transition: all .1s ease-in-out;
 		}
 
-		a:active { color: black; }
-		a:visited { color: black; }
+		a:active { 
+			color: white; 
+			background-color: black;
+		}
+		a:visited { 
+			color: black; 
+		}
 
 		a.top {
 			font-size: .5em;
@@ -101,13 +110,39 @@
 		/* CONTENT */
 
 		#container {
-		  max-width: 720px;
-		  margin: 0 auto 50px auto;
+			max-width: 90%;
+			margin: 0 auto 50px auto;
 		}
 
 		.section {
 			display: flex;
 			align-items: baseline;
+		}
+
+		@media (min-width: 1200px) {
+			#container {
+			  max-width: 50vw;
+			  margin: 0 auto 50px 30vw;
+			}
+			#contents {
+				max-width: 20vw;
+				position: fixed;
+				left: 50px;
+				padding: 0 30px 30px 30px;
+				font-size: .8em;
+				align-items: baseline;
+			}
+		}
+
+		#contents li {
+			list-style-type: none;
+			padding-left: 1em;
+  			text-indent: -1em;
+		}
+
+		ul, ol {
+			margin: 0;
+			padding: 0;
 		}
 		
 	</style>
@@ -118,21 +153,22 @@
 	<p class="center">Sarim Abbas, Antonio Cao, Julia Ma, Evan Smith</p>
 
 
-	<h2>Table of Contents</h2>
-	<ul>
-		<li><a href="#summary">Executive Summary</a></li>
-		<li><a href="#screens">Screens and Interactive Exhibits</a></li>
-		<li><a href="#vr-ar">Virtual Reality and Augmented Reality</a></li>
-		<li><a href="#navigation">Navigation Technology</a></li>
-		<li><a href="#accessibility">Accessibility</a></li>
-		<li><a href="#conclusion">Conclusion</a></li>
-		<li><a href="#notes">Notes</a></li>
-		<li><a href="#works-cited">Works Cited</a></li>
-	</ul>
+	<div id="contents">
+		<h2>Table of Contents</h2>
+		<ul>
+			<li><a href="#summary">– Executive Summary</a></li>
+			<li><a href="#screens">– Screens and Interactive Exhibits</a></li>
+			<li><a href="#vr-ar">– Virtual Reality and Augmented Reality</a></li>
+			<li><a href="#navigation">– Navigation Technology</a></li>
+			<li><a href="#accessibility">– Accessibility</a></li>
+			<li><a href="#conclusion">– Conclusion</a></li>
+			<li><a href="#notes">– Notes</a></li>
+			<li><a href="#works-cited">– Works Cited</a></li>
+		</ul>
+	</div>
 
 	<div class="section">
 		<h2 id="summary">Executive Summary</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<p>While “interactive exhibit” tends to conjure images of screens and digital content, museums have long been providing ways for visitors to engage with the content behind the glass. This engagement is perhaps best characterized in the Discovery Room on the second floor of the Peabody, a designated space to bring hands-on interaction with living animals and other natural treasures. “The Discovery Room’s most important rule is ‘Please Touch!’” proclaims its website,<sup id="s1"><a href="#1">1</a></sup></sup> and it follows through on that rule. With large numbers of children coming to the museum daily, such a child-focused area sees heavy use and is extremely popular (over 60,000 visitors visit the space annually out of 150,000 total).</p>
@@ -143,7 +179,6 @@
 
 	<div class="section">
 		<h2 id="screens">Screens and Interactive Exhibits</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<h3>Touchscreens</h3>
@@ -177,7 +212,6 @@
 
 	<div class="section">
 		<h2 id="vr-ar">Virtual Reality and Augmented Reality</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<p>Discussions on museums adapting modern technologies would not be complete without referencing Virtual Reality (VR) and Augmented Reality (AR). These technologies have been in use by museums at least as early as 2010, but it is only within the last five years that the advent of lighter, cheaper headsets, tools and software have unlocked the promise of these technologies.</p>
@@ -256,7 +290,6 @@
 
 	<div class="section">
 		<h2 id="navigation">Navigation Technology</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 	
 	<h3>Types of Localization Technologies</h3>
@@ -330,7 +363,6 @@
 
 	<div class="section">
 		<h2 id="accessibility">Accessibility</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<p>While the newest technology could enhance museum experiences to exciting realms we could only dream of in the past, it is always important to think about how all different types of visitors can not only access but also enjoy the same exhibitions. Museums can be spaces to learn, to relax, and to hang out with family and friends, and they provide opportunities that should be available to people with physical, mental, and developmental disabilities. Not only are there common practices to make museum content accessible, there are also new technologies and various programming specifically designed to improve the experiences of visitors with disabilities. </p>
@@ -373,7 +405,6 @@
 
 	<div class="section">
 		<h2 id="conclusion">Conclusion</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<p>As the Peabody explores new ideas during its renovation planning, we aim to provide a broad overview of techniques, technologies and tools that can assist visitors navigate around museum space and increase interactivity with exhibits. Our findings were split across four dimensions:</p>
@@ -390,7 +421,6 @@
 
 	<div class="section">
 		<h2 id="notes">Notes</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<ol>
@@ -439,7 +469,6 @@
 
 	<div class="section">
 		<h2 id="works-cited">Works Cited</h2>
-		<a href="#container" class="top">TOP</a>
 	</div>
 
 	<p>"A Short Comparison of BLE Hardware for Commercial Use." <i>IT Craft.</i> Accessed September 29, 2018. https://itechcraft.com/ibeacon-development/comparison-of-ble-hardware.</p>
