@@ -1,0 +1,135 @@
+no,image,name,place,date,material,size,acquired
+1,assets/img1.jpg,Leather Yurts,"Inner Mongolia, China",Summer 2014,Leather,Oreo,Bought
+2,assets/img2.jpg,Buckingham Palace Crown,"London, UK",August 2015,Metal,Ferrero Rocher,Bought
+3,assets/img3.jpg,London Landmarks,"London, UK",August 2015,Metal,Animal Crackers,Bought
+4,assets/img4.jpg,Vatican City Coat of Arms,Vatican City,August 2015,Metal and Enamel,Cheez-it,Bought
+5,assets/img5.jpg,Mini Purse,China,Unknown,Leather,Mochi Ice Cream,Bought
+6,assets/img6.jpg,Hershey Kiss,"Hershey, PA",October 2016,Metal,Hershey Kiss,Bought
+7,assets/img7.jpg,Yale University,"New Haven, CT",May 2017,Metal,Apricot,Bought
+8,assets/img8.jpg,M&M Ms. Brown,"New York City, NY",March 2017,Plastic and Metal,Peach Ring,Bought
+9,assets/img9.jpg,Tiki God of Happiness,"Hilo, HI",June 2017,Wood,Milano Cookie,Bought
+10,assets/img10.jpg,Hulu with Ox Character,"Yunnan, China",August 2017,Plastic,A Couple Blueberries,Bought
+11,assets/img11.jpg,Hamilton Star,"New York City, NY",March 2017,Metal,Chips Ahoy Cookie,Gift from Hamilton Performance
+12,assets/img12.jpg,Netherlands Clogs,Netherlands,2016 (?),Porcelain,Raspberry,Gift from Dad
+13,assets/img13.jpg,Small Drum,"New Haven, CT",Found Fall 2017,"Leather, String, and Wood",Blackberry,Found in Yale Dorm
+14,assets/img14.jpg,Obama Portrait,"State College, PA",Unknown,Metal and Resin,Chocolate Melt,Gift from Grandpa
+15,assets/img15.jpg,Ecuador Dolphin,Ecuador,Spring 2004,Tagua Nut and Clay,Tagua Nut,Gift from Teacher
+16,assets/img16.jpg,Gumball Machine,"State College, PA",Unknown,Plastic and Candy,Tangerine,Party Gift
+17,assets/img17.jpg,Steam,"New Haven, CT",Spring 2015,Laser-cut Acrylic,Onion Ring,Free Handout
+18,assets/img18.jpg,St. Louis T-Shirt,St. Louis,Unknown,Plastic,Yale Dining Cheesecake Bar,Gift from Mom (I think)
+19,assets/img19.jpg,Hershey Kiss,"Hershey, PA",October 2016,Metal and Enamel,Mini Hershey Bar,Bought
+20,assets/img20.jpg,Time Turner,"London, UK",August 2015,Plastic That Looks Like Metal and Sand,Keebler Fudge Stripes Cookies,Bought
+21,assets/img21.jpg,Hogwarts Shield,"London, UK",August 2015,Metal and Enamel,Keebler Fudge Stripes Cookies,Bought
+22,assets/img22.jpg,Maid of the Mist Key,Niagara Falls,2014 (?),Metal and Resin,The Other KitKat,Bought
+23,assets/img23.jpg,Fairy Maiden,China,Unknown,Plastic,Mandarin Orange Slice,Inherited from Mom
+24,assets/img24.jpg,Sunny Daisy,"State College, PA",Unknown,Plastic,Gumball,"Came with a Diary, Gift"
+25,assets/img25.jpg,Foster the People Diamond,"State College, PA",Fall 2014,Flexible Plastic,Girl Scout Thin Mint,"Bought, from a FtP Concert"
+26,assets/img26.jpg,Crayola Stamp,"State College, PA",Unknown,Metal,Stacy's Pita Chip,Gift
+27,assets/img27.jpg,Edinburgh Castle,"Edinburgh, Scotland, UK",May 2016,Metal and Enamel,Girl Scout Samoa,Bought
+28,assets/img28.jpg,National Air and Space Museum,"Washington, DC",Unknown,Metal,Jaw Breaker,Bought
+29,assets/img29.jpg,Boston Landmarks,"Boston, MA",Fall 2015,Metal,Gumball,Bought
+30,assets/img30.jpg,Venzia Canals,"Venice, Italy",August 2015,Metal,Terra Blues Chip,Bought
+31,assets/img31.jpg,Hexiehao Train Flashlight,"Beijing, China",2013,Plastic,One KitKat,Gift from Mom
+32,assets/img32.jpg,Whistle,"State College, PA",Unknown,Metal,Stick Pretzel,Gift
+33,assets/img33.jpg,Canada Bear,Canada,Unknown,Metal and Enamel,Famous Amos Cookie,Unknown
+34,assets/img34.jpg,Death Valley National Park,Death Valley,Unknown,Plastic,Ghirardelli Square,Gift from Dad
+35,assets/img35.jpg,National Gallery of Art,"Washington, DC",Unknown,Metal and Resin,Famous Amos Cookie,Bought
+36,assets/img36.jpg,Los Angeles Rose,"Los Angeles, CA",2016 (?),Metal and Enamel,Dorito Chip,Gift from Dad
+37,assets/img37.jpg,Seattle Crab,"Seattle, WA",August 2016,Metal,Mini Snickers,Bought
+38,assets/img38.jpg,Jason’s Portrait,"State College, PA",Unknown,Metal,Grape,Inherited from Mom
+39,assets/img39.jpg,Leaning Tower of Pisa,"Pisa, Italy",August 2015,Metal,Cheez-it,Bought
+40,assets/img40.jpg,Big Ben,"London, UK",August 2015,Metal,Girl Scout Do-si-do,Bought
+41,assets/img41.jpg,DC Panda,"Washington, DC",Unknown,Resin,Small Apricot,Unknown
+42,assets/img42.jpg,London Double Decker Bus,"London, UK",August 2015,Metal,Girl Scout Tagalong,Bought
+43,assets/img43.jpg,Roma Landmarks,"Rome, Italy",August 2015,Metal,Donut Hole,Bought
+44,assets/img44.jpg,Italy Coat of Arms,"Rome, Italy",August 2015,Metal,Dried Apricot,Bought
+45,assets/img45.jpg,Fudan University Apple,"Shanghai, China",2016 (?),Metal and Enamel,Prune,Gift from Dad
+46,assets/img46.jpg,Soccer Player,"Beijing, China",Summer 2008,Plastic,Orange Slice,Bought
+47,assets/img47.jpg,Din Tai Fung Bowl,"Taipei, Taiwan",2016,Metal and Enamel,Shell Pasta,Gift from Mom
+48,assets/img48.jpg,Din Tai Fung Chopsticks,"Taipei, Taiwan",2016,Metal and Enamel,Gummy Worm,Gift from Mom
+49,assets/img49.jpg,State College Area High School Pawprint,"State College, PA",May 2015,Metal,Hazelnut,Bought
+50,assets/img50.jpg,Salt Lake Temple,"Salt Lake City, UT",2013 (?),Metal,York Peppermint Patty,Bought
+51,assets/img51.jpg,Sea World Shamu,"San Diego, CA",2014 (?),Metal and Resin,Strawberry,Bought
+52,assets/img52.jpg,USS Constitution,"Baltimore, MD",2014 (?),Metal and Resin,Macaroon,Bought
+53,assets/img53.jpg,PSU Plastics,"State College, PA",2005 (?),Plastic,Pims Cookie,Free Handout
+54,assets/img54.jpg,Arizona Bird,"Phoenix, AZ",,Plastic,,Gift from Dad
+55,assets/img55.jpg,RISD,"Providence, RI",Spring 2014,Metal,,Bought
+56,assets/img56.jpg,Universal Studios Globe,"Orlando, FL",2013 (?),Metal,,Bought
+57,assets/img57.jpg,Yellowstone Bear Print,Yellowstone,2011 (?),Metal and Resin,,Bought
+58,assets/img58.jpg,Dreamcatcher,"State College, PA",2011 (?),Cloth and String,,Gift from Grandpa
+59,assets/img59.jpg,SF Bear,"San Francisco, CA",2013 (?),Metal,,Bought
+60,assets/img60.jpg,Watch Shoe,"Shanghai, China",2010 (?),Cloth and Metal,Twinkie,Bought
+61,assets/img61.jpg,Singapore Skyline,Singapore,2014 (?),Metal,,Gift from Dad
+62,assets/img62.jpg,Power of the PAWS,"State College, PA",2012,Plastic,,Received at School
+63,assets/img63.jpg,Maple Leaf,"Vancouver, Canada",August 2016,Wood,,Bought
+64,assets/img64.jpg,Family Portrait,China,2013 (?),Plastic,,Bought
+65,assets/img65.jpg,Ox Pressed Coin,"Shanghai, China",2012 (?),Plastic and Metal,,Bought
+66,assets/img66.jpg,God Bless America,"State College, PA",Unknown,Metal and Resin,,Gift from Grandpa
+67,assets/img67.jpg,Minnie Mouse,"Orlando, FL",December 2015,Leather,,Bought
+69,assets/img69.jpg,Stephansdom,Austria,2016 (?),Metal,,Gift from Dad
+70,assets/img70.jpg,Globe,"State College, PA",Unknown,Plastic,,Inherited from Mom
+71,assets/img71.jpg,Talking Face (Woman),"State College, PA",Unknown,Cloth,,Inherited from Mom
+72,assets/img72.jpg,Talking Face (Man),"State College, PA",Unknown,Cloth,,Inherited from Mom
+73,assets/img73.jpg,Eiffel Tower,"Paris, France",2004 (?),Metal,,Bought (?)
+74,assets/img74.jpg,Dalmation,Unknown,Unknown,Plastic,,Unknown
+75,assets/img75.jpg,EAB,"State College, PA",Unknown,Flexible Plastic,,Inherited from Mom
+76,assets/img76.jpg,Gettysburg,"Gettysburg, PA",2006 (?),Plastic,,Bought
+77,assets/img77.jpg,Smiley Slinky Stamp,"State College, PA",Unknown,Plastic,,Party Gift
+78,assets/img78.jpg,Blank Frame,"State College, PA",Unknown,Plastic,,Unknown
+79,assets/img79.jpg,Maid of the Mist Plush,Niagara Falls,Unknown,Cloth,,Bought
+80,assets/img80.jpg,Peashooter,"Shanghai, China",2013 (?),Plastic,,Bought
+81,assets/img81.jpg,Cincinnati,"Cincinnati, OH",Summer 2012,Metal,,Bought
+82,assets/img82.jpg,State College Police Department,"State College, PA",Unknown,Plastic,,Free Handout
+83,assets/img83.jpg,Laa-Laa,"State College, PA",Unknown,Cloth,,Inherited from Mom
+84,assets/img84.jpg,Panda Baby,"State College, PA",Unknown,Cloth and Plastic,,Gift
+85,assets/img85.jpg,Gem Butterfly,"State College, PA",Unknown,Metal and Plastic,,Gift
+86,assets/img86.jpg,Customized Phone Decoration,"Shanghai, China",2012,Leather and Metal,,Bought
+87,assets/img87.jpg,USA Flag,"State College, PA",Unknown,Metal and Resin,,Gift from Grandpa
+88,assets/img88.jpg,Disneyland Container,"Anaheim, CA",Unknown,Metal,,Gift from Grandpa
+89,assets/img89.jpg,Plastic Braid,"State College, PA",Unknown,Plastic,,Self-made
+90,assets/img90.jpg,Self Portrait,"State College, PA",2004 (?),Plastic and Paper,Gingerbread Cookie,Made at School
+91,assets/img91.jpg,Alberta Gallery of Art,"Edmonton, Alberta, Canada",July 2015,Metal and Resin,,Bought
+92,assets/img92.jpg,Penn State Dad,"State College, PA",Unknown,Metal and Resin,,Inherited from Mom
+93,assets/img93.jpg,The Tech Museum Robot,"San Jose, CA",2015 (?),Metal,,Bought
+94,assets/img94.jpg,Striped Heart,"State College, PA",Unknown,Metal and Resin,,Gift
+95,assets/img95.jpg,Fuzzy Monkey,"State College, PA",Unknown,Plastic,,Gift
+96,assets/img96.jpg,Fuzzy Notebook,"State College, PA",Unknown,Paper and Cloth,,Gift
+97,assets/img97.jpg,Smithsonian Cherry Blossoms,"Washington, DC",2014 (?),Metal and Resin,M&Ms,Bought
+98,assets/img98.jpg,San Diego T-Shirt,"San Diego, CA",2014 (?),Plastic,,Bought
+99,assets/img99.jpg,Pig,"State College, PA",Unknown,Plastic,,Inherited from Mom
+100,assets/img100.jpg,World Choir Games,"Cincinnati, OH",Summer 2012,Metal,,Bought
+101,assets/img101.jpg,Bahamas,Bahamas,January 2012,Glass,,Bought
+102,assets/img102.jpg,Disney World,"Orlando, FL",2011 (?),Glass,,Bought
+103,assets/img103.jpg,Portrait with Friends,"Shanghai, China",2011 (?),Glass,,Bought
+104,assets/img104.jpg,San Francisco Landmarks,"San Francisco, CA",2013 (?),Metal,,Bought
+105,assets/img105.jpg,Washington DC Landmarks,"Washington, DC",2014 (?),Metal,,Bought
+106,assets/img106.jpg,Capitol Building,"Washington, DC",2014 (?),Metal,,Bought
+107,assets/img107.jpg,Mini-THON,"State College, PA",2013,Metal,,Bought
+108,assets/img108.jpg,Small Abacus,"Shanghai, China",2012 (?),Metal,,Bought
+109,assets/img109.jpg,Tulip Heart,Netherlands,2016 (?),Metal,,Gift from Dad
+110,assets/img110.jpg,Tu’er Ye,"Beijing, China",2014 (?),Polymer Clay,,Bought
+111,assets/img111.jpg,Pittsburgh,"Pittsburg, PA",2014 (?),Metal,,Bought
+112,assets/img112.jpg,Hong Kong Bears,"Hong Kong, China",2016,Metal and Resin,Graham Crackers,Gift from Mom
+113,assets/img113.jpg,Ox Stone,China,Unknown,Stone,Donut Hole,Bought
+114,assets/img114.jpg,Ling Ying Temple,"Hangzhou, China",Unknown,Metal,,Bought
+115,assets/img115.jpg,Malaysia,Malaysia,Unknown,Metal,,Gift from Dad
+116,assets/img116.jpg,Fudan University Jade,"Shanghai, China",Unknown,Metal and Plastic,,Gift from Dad
+117,assets/img117.jpg,Dizzy Panda,"Taipei, Taiwan",2016,Metal and Enamel,,Gift from Dad
+118,assets/img118.jpg,Taipei 101,"Taipei, Taiwan",2016,Metal and Enamel,,Gift from Dad
+119,assets/img119.jpg,Din Tai Fung Mascot,"Taipei, Taiwan",2016,Metal and Enamel,,Gift from Mom
+120,assets/img120.jpg,Fairy Maiden Cartoon,China,2017 (?),Flexible Plastic,,Bought
+121,assets/img121.jpg,Africa,"Addis Ababa, Ethiopia",2016,Leather (?),,Gift from Tsedenya
+122,assets/img122.jpg,Girl Doll,Thailand,2017,Cloth,,Gift from Tommy
+123,assets/img123.jpg,Phichit,Japan,2018,Flexible Plastic,,Gift from Joy
+124,assets/img124.jpg,Tian Tian Kai Xin,"Yunnan, China",August 2017,Wood (?),,Bought
+125,assets/img125.jpg,Ice Cream Cone Squishy,"New Haven, CT",2016,Foam,,Free Handout
+126,assets/img126.jpg,Croatia,"Dubrovnik, Croatia",October 2017,Metal,,Bought
+127,assets/img127.jpg,Google,"New Haven, CT",Fall 2018,Flexible Plastic,,Gift from Jessica
+128,assets/img128.jpg,MoMA,"New York City, NY",Fall 2018,Plastic,,Bought
+129,assets/img129.jpg,Tucan,Costa Rica,2017 (?),Metal and Enamel,,Bought
+130,assets/img130.jpg,CNN,"Atlanta, GA",2017 (?),Metal,,Gift from Mom
+131,assets/img131.jpg,Guggenheim Museum,"New York City, NY",July 2018,Metal,,Bought
+132,assets/img132.jpg,NYC Subway,"New York City, NY",July 2018,Plastic,,Bought
+133,assets/img133.jpg,F Train Bear,"New York City, NY",July 2018,Metal,,Bought
+134,assets/img134.jpg,Seattle Art Museum,"Seattle, WA",July 2018,Plastic,,Bought
+135,assets/img135.jpg,Stripped Bear,"State College, PA",Unknown,Cloth,,Inherited from Mom
