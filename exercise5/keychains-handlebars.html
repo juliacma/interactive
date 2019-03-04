@@ -10,12 +10,12 @@
 	<style>
 	
 body {
-font-family: Helvetica, Arial, sans-serif;
-font-weight: normal;
-font-style: normal;
-font-size: 16px;
-line-height: 1.2;
-background: grey;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	background: grey;
 }
 
 p {
@@ -131,8 +131,8 @@ img:hover {
 	height: 90%;
 	padding: 5%;
 	background-color: white;
-	opacity: 0;
-	transition: visibility 0s, opacity 1s;
+	/*opacity: 0;*/
+	/*transition: visibility 0s, opacity 1s;*/
 }
 
 /*.flex {
@@ -148,18 +148,76 @@ img:hover {
 
 .toggle:checked ~ .lbl-toggle .info {
 	display: block;
-	opacity: 1;
+	/*opacity: 1;*/
 }
 
 /*#checkbox-all {
 	display: 
 }*/
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 2000px) {
 	body {
-		font-size: 14px;
+		font-size: 100px;
+		margin: 50px;
 	}
 
+	.grid {
+		grid-template-columns: 1fr;
+		grid-row-gap: 50px;
+		grid-column-gap: 50px;
+	}
+}
+
+@media print {
+	body {
+		font-size: 12px;
+		background-color: white;
+		color: black;
+	}
+
+	h1, h2, h3 {
+		font-size: 1.2em;
+	}
+
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.grid-item {
+		height: 24.5vh;
+	}
+
+	img {
+		filter: grayscale(0%);
+	}
+
+	/*.lbl-toggle {
+		display: flex;
+		flex-direction: column;
+	}*/
+	
+	.img-container, .info {
+		display: block;
+		height: 50%;
+		/*opacity: 1;*/
+	}
+
+	.header {
+		color: black;
+	}
+
+	.master-toggle {
+		display: none;
+	}
+
+	.toggle:checked ~ .lbl-toggle .img-container, .toggle:checked ~ .lbl-toggle .info  {
+		display: block;
+	}
+
+	.page-break	{
+		display: block; 
+		page-break-before: always; 
+	}
 }
 
 </style>
