@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Idea 2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<style>
+
+body {
+	font-family: Times New Roman, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	text-align: center;
+	background-color: silver;
+}
+
+p {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	background-color: silver;
+}
+
+b, strong {
+	font-weight: 600;
+}
+
+i, em {
+	font-style: italic;
+}
+
+h1, h2, h3 {
+	font-family: Times New Roman, sans-serif;
+	font-weight: normal;
+	
+}
+
+h1 {
+	margin: 1em;
+}
+
+h2, h3 {
+	margin: 0;
+	margin-top: 1em;
+	font-style: italic;
+}
+
+/*CONTENT*/
+.container {
+	width: 300px;
+	margin: 5vh auto;
+	border: 1px black solid;
+	padding: 20px 100px;
+	background-color: white;
+}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+		<h1 id="date">Menu</h1>
+
+		<h2>Appetizers</h2>
+		<a href='puzzle1.html'>
+			<h3>Puzzle 1</h3>
+			<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</a>
+		   
+		<h3>Puzzle 2</h3>
+		<p class="description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		<h2>Mains</h2>
+		<h3>Puzzle 3</h3>
+		<p class="description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<h3>Puzzle 4</h3>
+		<p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		<h3>Puzzle 5</h3>
+		<p class="description">Excepteur sint occaecat cupidatat non proident.</p>
+
+		<h2>Desserts</h2>
+		<a href='puzzle6.html'>
+			<h3>Puzzle 6</h3>
+			<p class="description">Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</a>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script>
+		$(function(){
+
+			var today = new Date();
+			var dd = today.getDate();
+
+			var mm = today.getMonth()+1; 
+			var yyyy = today.getFullYear();
+			if(dd<10) 
+			{
+			    dd='0'+dd;
+			} 
+
+			if(mm<10) 
+			{
+			    mm='0'+mm;
+			} 
+
+			today = mm+'/'+dd+'/'+yyyy;
+			console.log(today);
+			$('#date').html('Menu for '+today);
+		});
+	</script>
+
+</body>
+
+</html>

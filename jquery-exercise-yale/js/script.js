@@ -44,19 +44,29 @@ $(document).ready(function(){
 
   $('#status').show();
 
+  var stop = 1; 
+  // is this line necessary
+
   $('#button').click(function(){
-    if (stop == true) {
-  	  $('#status').html('GO');
-  	  $('#status').css('background-color', 'green');
+    changeLights();
+  });
+
+  setInterval(function(){
+    changeLights();
+  }, 10000);
+
+  function changeLights() {
+    if (stop) {
+      $('#status').html('GO');
+      $('#status').css('background-color', 'green');
       $('#pigeon').show();
-  	  stop = false;
+      stop = 0;
     }
     else {
-  	  $('#status').html('STOP');
-  	  $('#status').css('background-color', 'red');
-      $('#pigeon').fadeOut();
-  	  stop = true;
-  	}
-  });
-  
+      $('#status').html('STOP');
+      $('#status').css('background-color', 'red');
+      $('#pigeon').fadeOut('slow');
+      stop = 1;
+    }
+  };
 });

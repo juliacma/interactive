@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Keychain Collection</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="../handlebars-v4.1.0.js"></script>
+	<style>
+	
+body {
+	font-family: Times New Roman, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/*a:hover{
+	color: #E6DADA;
+}*/
+
+b, strong {
+	font-weight: 600;
+}
+
+i, em {
+	font-style: italic;
+}
+
+h1, h2, h3 {
+	font-family: Times New Roman, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+}
+
+h1 {
+	margin: 0.25em 0;
+}
+
+h2, h3 {
+	margin: 0;
+	margin-bottom: 0.5em;
+}
+
+.header {
+	margin: 1em;
+}
+
+@media screen and (min-width: 2000px) {
+	body {
+		font-size: 100px;
+		margin: 50px;
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+		grid-row-gap: 50px;
+		grid-column-gap: 50px;
+	}
+}
+
+@media print {
+	body {
+		font-size: 12px;
+		background-color: white;
+		color: black;
+	}
+
+	h1, h2, h3 {
+		font-size: 1.2em;
+	}
+
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.grid-item {
+		height: 24.5vh;
+	}
+
+	img {
+		filter: grayscale(0%);
+	}
+
+	/*.lbl-toggle {
+		display: flex;
+		flex-direction: column;
+	}*/
+	
+	.img-container, .info {
+		display: block;
+		height: 50%;
+		/*opacity: 1;*/
+	}
+
+	.header {
+		color: black;
+	}
+
+	.master-toggle {
+		display: none;
+	}
+
+	.toggle:checked ~ .lbl-toggle .img-container, .toggle:checked ~ .lbl-toggle .info  {
+		display: block;
+	}
+
+	.page-break	{
+		display: block; 
+		page-break-before: always; 
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+	<div class="header">
+		<h1>Secret Recipes</h1>
+	</div>
+	<div id="keychain-data"></div>
+	<script id="template" type="text/x-handlebars-template">
+		<div class="grid">
+			{{#each post}}
+			<div class="grid-item">
+				<input id="checkbox{{no}}" class="toggle" type="checkbox" name="checkbox">
+				<label for="checkbox{{no}}" class="lbl-toggle">
+					<div class="img-container"><img src="{{image}}"/></div>
+					<div class="info">
+						<h2 class="name">{{name}}</h2>
+						<p class="place">From: {{place}}</p>
+						<p class="date">Date: {{date}}</p>
+						<p class="material">Material: {{material}}</p>
+						<p class="size">Size: {{size}}</p>
+						<p class="acquired">Acquired by: {{acquired}}</p>
+					</div>
+				</label>
+			</div>
+			{{/each}}
+		</div>
+	</script>
+
+	<script type="text/javascript">
+
+		var myInfo = document.getElementById("template").innerHTML;
+
+		var template = Handlebars.compile(myInfo);
+
+		var data = template({
+			post: [
+			  {
+			    "no": 1,
+			    "image": "assets/img1.jpg",
+			    "name": "Leather Yurts",
+			    "place": "Inner Mongolia, China",
+			    "date": "Summer 2014",
+			    "material": "Leather",
+			    "size": "Oreo",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 2,
+			    "image": "assets/img2.jpg",
+			    "name": "Buckingham Palace Crown",
+			    "place": "London, UK",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Ferrero Rocher",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 3,
+			    "image": "assets/img3.jpg",
+			    "name": "London Landmarks",
+			    "place": "London, UK",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Animal Crackers",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 4,
+			    "image": "assets/img4.jpg",
+			    "name": "Vatican City Coat of Arms",
+			    "place": "Vatican City",
+			    "date": "August 2015",
+			    "material": "Metal and Enamel",
+			    "size": "Cheez-it",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 5,
+			    "image": "assets/img5.jpg",
+			    "name": "Mini Purse",
+			    "place": "China",
+			    "date": "Unknown",
+			    "material": "Leather",
+			    "size": "Mochi Ice Cream",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 6,
+			    "image": "assets/img6.jpg",
+			    "name": "Hershey Kiss",
+			    "place": "Hershey, PA",
+			    "date": "October 2016",
+			    "material": "Metal",
+			    "size": "Hershey Kiss",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 7,
+			    "image": "assets/img7.jpg",
+			    "name": "Yale University",
+			    "place": "New Haven, CT",
+			    "date": "May 2017",
+			    "material": "Metal",
+			    "size": "Apricot",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 8,
+			    "image": "assets/img8.jpg",
+			    "name": "M&M Ms. Brown",
+			    "place": "New York City, NY",
+			    "date": "March 2017",
+			    "material": "Plastic and Metal",
+			    "size": "Peach Ring",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 9,
+			    "image": "assets/img9.jpg",
+			    "name": "Tiki God of Happiness",
+			    "place": "Hilo, HI",
+			    "date": "June 2017",
+			    "material": "Wood",
+			    "size": "Milano Cookie",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 10,
+			    "image": "assets/img10.jpg",
+			    "name": "Hulu with Ox Character",
+			    "place": "Yunnan, China",
+			    "date": "August 2017",
+			    "material": "Plastic",
+			    "size": "A Couple Blueberries",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 11,
+			    "image": "assets/img11.jpg",
+			    "name": "Hamilton Star",
+			    "place": "New York City, NY",
+			    "date": "March 2017",
+			    "material": "Metal",
+			    "size": "Chips Ahoy Cookie",
+			    "acquired": "Gift from Hamilton Performance"
+			  },
+			  {
+			    "no": 12,
+			    "image": "assets/img12.jpg",
+			    "name": "Netherlands Clogs",
+			    "place": "Netherlands",
+			    "date": "2016 (?)",
+			    "material": "Porcelain",
+			    "size": "Raspberry",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 13,
+			    "image": "assets/img13.jpg",
+			    "name": "Small Drum",
+			    "place": "New Haven, CT",
+			    "date": "Found Fall 2017",
+			    "material": "Leather, String, and Wood",
+			    "size": "Blackberry",
+			    "acquired": "Found in Yale Dorm"
+			  },
+			  {
+			    "no": 14,
+			    "image": "assets/img14.jpg",
+			    "name": "Obama Portrait",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal and Resin",
+			    "size": "Chocolate Melt",
+			    "acquired": "Gift from Grandpa"
+			  },
+			  {
+			    "no": 15,
+			    "image": "assets/img15.jpg",
+			    "name": "Ecuador Dolphin",
+			    "place": "Ecuador",
+			    "date": "Spring 2004",
+			    "material": "Tagua Nut and Clay",
+			    "size": "Tagua Nut",
+			    "acquired": "Gift from Teacher"
+			  },
+			  {
+			    "no": 16,
+			    "image": "assets/img16.jpg",
+			    "name": "Gumball Machine",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic and Candy",
+			    "size": "Tangerine",
+			    "acquired": "Party Gift"
+			  },
+			  {
+			    "no": 17,
+			    "image": "assets/img17.jpg",
+			    "name": "Steam",
+			    "place": "New Haven, CT",
+			    "date": "Spring 2015",
+			    "material": "Laser-cut Acrylic",
+			    "size": "Onion Ring",
+			    "acquired": "Free Handout"
+			  },
+			  {
+			    "no": 18,
+			    "image": "assets/img18.jpg",
+			    "name": "St. Louis T-Shirt",
+			    "place": "St. Louis",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "Yale Dining Cheesecake Bar",
+			    "acquired": "Gift from Mom (I think)"
+			  },
+			  {
+			    "no": 19,
+			    "image": "assets/img19.jpg",
+			    "name": "Hershey Kiss",
+			    "place": "Hershey, PA",
+			    "date": "October 2016",
+			    "material": "Metal and Enamel",
+			    "size": "Mini Hershey Bar",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 20,
+			    "image": "assets/img20.jpg",
+			    "name": "Time Turner",
+			    "place": "London, UK",
+			    "date": "August 2015",
+			    "material": "Plastic That Looks Like Metal and Sand",
+			    "size": "Keebler Fudge Stripes Cookies",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 21,
+			    "image": "assets/img21.jpg",
+			    "name": "Hogwarts Shield",
+			    "place": "London, UK",
+			    "date": "August 2015",
+			    "material": "Metal and Enamel",
+			    "size": "Keebler Fudge Stripes Cookies",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 22,
+			    "image": "assets/img22.jpg",
+			    "name": "Maid of the Mist Key",
+			    "place": "Niagara Falls",
+			    "date": "2014 (?)",
+			    "material": "Metal and Resin",
+			    "size": "The Other KitKat",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 23,
+			    "image": "assets/img23.jpg",
+			    "name": "Fairy Maiden",
+			    "place": "China",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "Mandarin Orange Slice",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 24,
+			    "image": "assets/img24.jpg",
+			    "name": "Sunny Daisy",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "Gumball",
+			    "acquired": "Came with a Diary, Gift"
+			  },
+			  {
+			    "no": 25,
+			    "image": "assets/img25.jpg",
+			    "name": "Foster the People Diamond",
+			    "place": "State College, PA",
+			    "date": "Fall 2014",
+			    "material": "Flexible Plastic",
+			    "size": "Girl Scout Thin Mint",
+			    "acquired": "Bought, from a FtP Concert"
+			  },
+			  {
+			    "no": 26,
+			    "image": "assets/img26.jpg",
+			    "name": "Crayola Stamp",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "Stacy's Pita Chip",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 27,
+			    "image": "assets/img27.jpg",
+			    "name": "Edinburgh Castle",
+			    "place": "Edinburgh, Scotland, UK",
+			    "date": "May 2016",
+			    "material": "Metal and Enamel",
+			    "size": "Girl Scout Samoa",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 28,
+			    "image": "assets/img28.jpg",
+			    "name": "National Air and Space Museum",
+			    "place": "Washington, DC",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "Jaw Breaker",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 29,
+			    "image": "assets/img29.jpg",
+			    "name": "Boston Landmarks",
+			    "place": "Boston, MA",
+			    "date": "Fall 2015",
+			    "material": "Metal",
+			    "size": "Gumball",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 30,
+			    "image": "assets/img30.jpg",
+			    "name": "Venzia Canals",
+			    "place": "Venice, Italy",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Terra Blues Chip",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 31,
+			    "image": "assets/img31.jpg",
+			    "name": "Hexiehao Train Flashlight",
+			    "place": "Beijing, China",
+			    "date": 2013,
+			    "material": "Plastic",
+			    "size": "One KitKat",
+			    "acquired": "Gift from Mom"
+			  },
+			  {
+			    "no": 32,
+			    "image": "assets/img32.jpg",
+			    "name": "Whistle",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "Stick Pretzel",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 33,
+			    "image": "assets/img33.jpg",
+			    "name": "Canada Bear",
+			    "place": "Canada",
+			    "date": "Unknown",
+			    "material": "Metal and Enamel",
+			    "size": "Famous Amos Cookie",
+			    "acquired": "Unknown"
+			  },
+			  {
+			    "no": 34,
+			    "image": "assets/img34.jpg",
+			    "name": "Death Valley National Park",
+			    "place": "Death Valley",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "Ghirardelli Square",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 35,
+			    "image": "assets/img35.jpg",
+			    "name": "National Gallery of Art",
+			    "place": "Washington, DC",
+			    "date": "Unknown",
+			    "material": "Metal and Resin",
+			    "size": "Famous Amos Cookie",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 36,
+			    "image": "assets/img36.jpg",
+			    "name": "Los Angeles Rose",
+			    "place": "Los Angeles, CA",
+			    "date": "2016 (?)",
+			    "material": "Metal and Enamel",
+			    "size": "Dorito Chip",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 37,
+			    "image": "assets/img37.jpg",
+			    "name": "Seattle Crab",
+			    "place": "Seattle, WA",
+			    "date": "August 2016",
+			    "material": "Metal",
+			    "size": "Mini Snickers",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 38,
+			    "image": "assets/img38.jpg",
+			    "name": "Jason’s Portrait",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "Grape",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 39,
+			    "image": "assets/img39.jpg",
+			    "name": "Leaning Tower of Pisa",
+			    "place": "Pisa, Italy",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Cheez-it",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 40,
+			    "image": "assets/img40.jpg",
+			    "name": "Big Ben",
+			    "place": "London, UK",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Girl Scout Do-si-do",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 41,
+			    "image": "assets/img41.jpg",
+			    "name": "DC Panda",
+			    "place": "Washington, DC",
+			    "date": "Unknown",
+			    "material": "Resin",
+			    "size": "Small Apricot",
+			    "acquired": "Unknown"
+			  },
+			  {
+			    "no": 42,
+			    "image": "assets/img42.jpg",
+			    "name": "London Double Decker Bus",
+			    "place": "London, UK",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Girl Scout Tagalong",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 43,
+			    "image": "assets/img43.jpg",
+			    "name": "Roma Landmarks",
+			    "place": "Rome, Italy",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Donut Hole",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 44,
+			    "image": "assets/img44.jpg",
+			    "name": "Italy Coat of Arms",
+			    "place": "Rome, Italy",
+			    "date": "August 2015",
+			    "material": "Metal",
+			    "size": "Dried Apricot",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 45,
+			    "image": "assets/img45.jpg",
+			    "name": "Fudan University Apple",
+			    "place": "Shanghai, China",
+			    "date": "2016 (?)",
+			    "material": "Metal and Enamel",
+			    "size": "Prune",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 46,
+			    "image": "assets/img46.jpg",
+			    "name": "Soccer Player",
+			    "place": "Beijing, China",
+			    "date": "Summer 2008",
+			    "material": "Plastic",
+			    "size": "Orange Slice",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 47,
+			    "image": "assets/img47.jpg",
+			    "name": "Din Tai Fung Bowl",
+			    "place": "Taipei, Taiwan",
+			    "date": 2016,
+			    "material": "Metal and Enamel",
+			    "size": "Shell Pasta",
+			    "acquired": "Gift from Mom"
+			  },
+			  {
+			    "no": 48,
+			    "image": "assets/img48.jpg",
+			    "name": "Din Tai Fung Chopsticks",
+			    "place": "Taipei, Taiwan",
+			    "date": 2016,
+			    "material": "Metal and Enamel",
+			    "size": "Gummy Worm",
+			    "acquired": "Gift from Mom"
+			  },
+			  {
+			    "no": 49,
+			    "image": "assets/img49.jpg",
+			    "name": "State College Area High School Pawprint",
+			    "place": "State College, PA",
+			    "date": "May 2015",
+			    "material": "Metal",
+			    "size": "Hazelnut",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 50,
+			    "image": "assets/img50.jpg",
+			    "name": "Salt Lake Temple",
+			    "place": "Salt Lake City, UT",
+			    "date": "2013 (?)",
+			    "material": "Metal",
+			    "size": "York Peppermint Patty",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 51,
+			    "image": "assets/img51.jpg",
+			    "name": "Sea World Shamu",
+			    "place": "San Diego, CA",
+			    "date": "2014 (?)",
+			    "material": "Metal and Resin",
+			    "size": "Strawberry",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 52,
+			    "image": "assets/img52.jpg",
+			    "name": "USS Constitution",
+			    "place": "Baltimore, MD",
+			    "date": "2014 (?)",
+			    "material": "Metal and Resin",
+			    "size": "Macaroon",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 53,
+			    "image": "assets/img53.jpg",
+			    "name": "PSU Plastics",
+			    "place": "State College, PA",
+			    "date": "2005 (?)",
+			    "material": "Plastic",
+			    "size": "Pims Cookie",
+			    "acquired": "Free Handout"
+			  },
+			  {
+			    "no": 54,
+			    "image": "assets/img54.jpg",
+			    "name": "Arizona Bird",
+			    "place": "Phoenix, AZ",
+			    "date": "",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 55,
+			    "image": "assets/img55.jpg",
+			    "name": "RISD",
+			    "place": "Providence, RI",
+			    "date": "Spring 2014",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 56,
+			    "image": "assets/img56.jpg",
+			    "name": "Universal Studios Globe",
+			    "place": "Orlando, FL",
+			    "date": "2013 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 57,
+			    "image": "assets/img57.jpg",
+			    "name": "Yellowstone Bear Print",
+			    "place": "Yellowstone",
+			    "date": "2011 (?)",
+			    "material": "Metal and Resin",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 58,
+			    "image": "assets/img58.jpg",
+			    "name": "Dreamcatcher",
+			    "place": "State College, PA",
+			    "date": "2011 (?)",
+			    "material": "Cloth and String",
+			    "size": "",
+			    "acquired": "Gift from Grandpa"
+			  },
+			  {
+			    "no": 59,
+			    "image": "assets/img59.jpg",
+			    "name": "SF Bear",
+			    "place": "San Francisco, CA",
+			    "date": "2013 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 60,
+			    "image": "assets/img60.jpg",
+			    "name": "Watch Shoe",
+			    "place": "Shanghai, China",
+			    "date": "2010 (?)",
+			    "material": "Cloth and Metal",
+			    "size": "Twinkie",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 61,
+			    "image": "assets/img61.jpg",
+			    "name": "Singapore Skyline",
+			    "place": "Singapore",
+			    "date": "2014 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 62,
+			    "image": "assets/img62.jpg",
+			    "name": "Power of the PAWS",
+			    "place": "State College, PA",
+			    "date": 2012,
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Received at School"
+			  },
+			  {
+			    "no": 63,
+			    "image": "assets/img63.jpg",
+			    "name": "Maple Leaf",
+			    "place": "Vancouver, Canada",
+			    "date": "August 2016",
+			    "material": "Wood",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 64,
+			    "image": "assets/img64.jpg",
+			    "name": "Family Portrait",
+			    "place": "China",
+			    "date": "2013 (?)",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 65,
+			    "image": "assets/img65.jpg",
+			    "name": "Ox Pressed Coin",
+			    "place": "Shanghai, China",
+			    "date": "2012 (?)",
+			    "material": "Plastic and Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 66,
+			    "image": "assets/img66.jpg",
+			    "name": "God Bless America",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal and Resin",
+			    "size": "",
+			    "acquired": "Gift from Grandpa"
+			  },
+			  {
+			    "no": 67,
+			    "image": "assets/img67.jpg",
+			    "name": "Minnie Mouse",
+			    "place": "Orlando, FL",
+			    "date": "December 2015",
+			    "material": "Leather",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 69,
+			    "image": "assets/img69.jpg",
+			    "name": "Stephansdom",
+			    "place": "Austria",
+			    "date": "2016 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 70,
+			    "image": "assets/img70.jpg",
+			    "name": "Globe",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 71,
+			    "image": "assets/img71.jpg",
+			    "name": "Talking Face (Woman)",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Cloth",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 72,
+			    "image": "assets/img72.jpg",
+			    "name": "Talking Face (Man)",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Cloth",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 73,
+			    "image": "assets/img73.jpg",
+			    "name": "Eiffel Tower",
+			    "place": "Paris, France",
+			    "date": "2004 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought (?)"
+			  },
+			  {
+			    "no": 74,
+			    "image": "assets/img74.jpg",
+			    "name": "Dalmation",
+			    "place": "Unknown",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Unknown"
+			  },
+			  {
+			    "no": 75,
+			    "image": "assets/img75.jpg",
+			    "name": "EAB",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Flexible Plastic",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 76,
+			    "image": "assets/img76.jpg",
+			    "name": "Gettysburg",
+			    "place": "Gettysburg, PA",
+			    "date": "2006 (?)",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 77,
+			    "image": "assets/img77.jpg",
+			    "name": "Smiley Slinky Stamp",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Party Gift"
+			  },
+			  {
+			    "no": 78,
+			    "image": "assets/img78.jpg",
+			    "name": "Blank Frame",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Unknown"
+			  },
+			  {
+			    "no": 79,
+			    "image": "assets/img79.jpg",
+			    "name": "Maid of the Mist Plush",
+			    "place": "Niagara Falls",
+			    "date": "Unknown",
+			    "material": "Cloth",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 80,
+			    "image": "assets/img80.jpg",
+			    "name": "Peashooter",
+			    "place": "Shanghai, China",
+			    "date": "2013 (?)",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 81,
+			    "image": "assets/img81.jpg",
+			    "name": "Cincinnati",
+			    "place": "Cincinnati, OH",
+			    "date": "Summer 2012",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 82,
+			    "image": "assets/img82.jpg",
+			    "name": "State College Police Department",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Free Handout"
+			  },
+			  {
+			    "no": 83,
+			    "image": "assets/img83.jpg",
+			    "name": "Laa-Laa",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Cloth",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 84,
+			    "image": "assets/img84.jpg",
+			    "name": "Panda Baby",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Cloth and Plastic",
+			    "size": "",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 85,
+			    "image": "assets/img85.jpg",
+			    "name": "Gem Butterfly",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal and Plastic",
+			    "size": "",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 86,
+			    "image": "assets/img86.jpg",
+			    "name": "Customized Phone Decoration",
+			    "place": "Shanghai, China",
+			    "date": 2012,
+			    "material": "Leather and Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 87,
+			    "image": "assets/img87.jpg",
+			    "name": "USA Flag",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal and Resin",
+			    "size": "",
+			    "acquired": "Gift from Grandpa"
+			  },
+			  {
+			    "no": 88,
+			    "image": "assets/img88.jpg",
+			    "name": "Disneyland Container",
+			    "place": "Anaheim, CA",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Gift from Grandpa"
+			  },
+			  {
+			    "no": 89,
+			    "image": "assets/img89.jpg",
+			    "name": "Plastic Braid",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Self-made"
+			  },
+			  {
+			    "no": 90,
+			    "image": "assets/img90.jpg",
+			    "name": "Self Portrait",
+			    "place": "State College, PA",
+			    "date": "2004 (?)",
+			    "material": "Plastic and Paper",
+			    "size": "Gingerbread Cookie",
+			    "acquired": "Made at School"
+			  },
+			  {
+			    "no": 91,
+			    "image": "assets/img91.jpg",
+			    "name": "Alberta Gallery of Art",
+			    "place": "Edmonton, Alberta, Canada",
+			    "date": "July 2015",
+			    "material": "Metal and Resin",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 92,
+			    "image": "assets/img92.jpg",
+			    "name": "Penn State Dad",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal and Resin",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 93,
+			    "image": "assets/img93.jpg",
+			    "name": "The Tech Museum Robot",
+			    "place": "San Jose, CA",
+			    "date": "2015 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 94,
+			    "image": "assets/img94.jpg",
+			    "name": "Striped Heart",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Metal and Resin",
+			    "size": "",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 95,
+			    "image": "assets/img95.jpg",
+			    "name": "Fuzzy Monkey",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 96,
+			    "image": "assets/img96.jpg",
+			    "name": "Fuzzy Notebook",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Paper and Cloth",
+			    "size": "",
+			    "acquired": "Gift"
+			  },
+			  {
+			    "no": 97,
+			    "image": "assets/img97.jpg",
+			    "name": "Smithsonian Cherry Blossoms",
+			    "place": "Washington, DC",
+			    "date": "2014 (?)",
+			    "material": "Metal and Resin",
+			    "size": "M&Ms",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 98,
+			    "image": "assets/img98.jpg",
+			    "name": "San Diego T-Shirt",
+			    "place": "San Diego, CA",
+			    "date": "2014 (?)",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 99,
+			    "image": "assets/img99.jpg",
+			    "name": "Pig",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  },
+			  {
+			    "no": 100,
+			    "image": "assets/img100.jpg",
+			    "name": "World Choir Games",
+			    "place": "Cincinnati, OH",
+			    "date": "Summer 2012",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 101,
+			    "image": "assets/img101.jpg",
+			    "name": "Bahamas",
+			    "place": "Bahamas",
+			    "date": "January 2012",
+			    "material": "Glass",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 102,
+			    "image": "assets/img102.jpg",
+			    "name": "Disney World",
+			    "place": "Orlando, FL",
+			    "date": "2011 (?)",
+			    "material": "Glass",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 103,
+			    "image": "assets/img103.jpg",
+			    "name": "Portrait with Friends",
+			    "place": "Shanghai, China",
+			    "date": "2011 (?)",
+			    "material": "Glass",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 104,
+			    "image": "assets/img104.jpg",
+			    "name": "San Francisco Landmarks",
+			    "place": "San Francisco, CA",
+			    "date": "2013 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 105,
+			    "image": "assets/img105.jpg",
+			    "name": "Washington DC Landmarks",
+			    "place": "Washington, DC",
+			    "date": "2014 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 106,
+			    "image": "assets/img106.jpg",
+			    "name": "Capitol Building",
+			    "place": "Washington, DC",
+			    "date": "2014 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 107,
+			    "image": "assets/img107.jpg",
+			    "name": "Mini-THON",
+			    "place": "State College, PA",
+			    "date": 2013,
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 108,
+			    "image": "assets/img108.jpg",
+			    "name": "Small Abacus",
+			    "place": "Shanghai, China",
+			    "date": "2012 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 109,
+			    "image": "assets/img109.jpg",
+			    "name": "Tulip Heart",
+			    "place": "Netherlands",
+			    "date": "2016 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 110,
+			    "image": "assets/img110.jpg",
+			    "name": "Tu’er Ye",
+			    "place": "Beijing, China",
+			    "date": "2014 (?)",
+			    "material": "Polymer Clay",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 111,
+			    "image": "assets/img111.jpg",
+			    "name": "Pittsburgh",
+			    "place": "Pittsburg, PA",
+			    "date": "2014 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 112,
+			    "image": "assets/img112.jpg",
+			    "name": "Hong Kong Bears",
+			    "place": "Hong Kong, China",
+			    "date": 2016,
+			    "material": "Metal and Resin",
+			    "size": "Graham Crackers",
+			    "acquired": "Gift from Mom"
+			  },
+			  {
+			    "no": 113,
+			    "image": "assets/img113.jpg",
+			    "name": "Ox Stone",
+			    "place": "China",
+			    "date": "Unknown",
+			    "material": "Stone",
+			    "size": "Donut Hole",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 114,
+			    "image": "assets/img114.jpg",
+			    "name": "Ling Ying Temple",
+			    "place": "Hangzhou, China",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 115,
+			    "image": "assets/img115.jpg",
+			    "name": "Malaysia",
+			    "place": "Malaysia",
+			    "date": "Unknown",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 116,
+			    "image": "assets/img116.jpg",
+			    "name": "Fudan University Jade",
+			    "place": "Shanghai, China",
+			    "date": "Unknown",
+			    "material": "Metal and Plastic",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 117,
+			    "image": "assets/img117.jpg",
+			    "name": "Dizzy Panda",
+			    "place": "Taipei, Taiwan",
+			    "date": 2016,
+			    "material": "Metal and Enamel",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 118,
+			    "image": "assets/img118.jpg",
+			    "name": "Taipei 101",
+			    "place": "Taipei, Taiwan",
+			    "date": 2016,
+			    "material": "Metal and Enamel",
+			    "size": "",
+			    "acquired": "Gift from Dad"
+			  },
+			  {
+			    "no": 119,
+			    "image": "assets/img119.jpg",
+			    "name": "Din Tai Fung Mascot",
+			    "place": "Taipei, Taiwan",
+			    "date": 2016,
+			    "material": "Metal and Enamel",
+			    "size": "",
+			    "acquired": "Gift from Mom"
+			  },
+			  {
+			    "no": 120,
+			    "image": "assets/img120.jpg",
+			    "name": "Fairy Maiden Cartoon",
+			    "place": "China",
+			    "date": "2017 (?)",
+			    "material": "Flexible Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 121,
+			    "image": "assets/img121.jpg",
+			    "name": "Africa",
+			    "place": "Addis Ababa, Ethiopia",
+			    "date": 2016,
+			    "material": "Leather (?)",
+			    "size": "",
+			    "acquired": "Gift from Tsedenya"
+			  },
+			  {
+			    "no": 122,
+			    "image": "assets/img122.jpg",
+			    "name": "Girl Doll",
+			    "place": "Thailand",
+			    "date": 2017,
+			    "material": "Cloth",
+			    "size": "",
+			    "acquired": "Gift from Tommy"
+			  },
+			  {
+			    "no": 123,
+			    "image": "assets/img123.jpg",
+			    "name": "Phichit",
+			    "place": "Japan",
+			    "date": 2018,
+			    "material": "Flexible Plastic",
+			    "size": "",
+			    "acquired": "Gift from Joy"
+			  },
+			  {
+			    "no": 124,
+			    "image": "assets/img124.jpg",
+			    "name": "Tian Tian Kai Xin",
+			    "place": "Yunnan, China",
+			    "date": "August 2017",
+			    "material": "Wood (?)",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 125,
+			    "image": "assets/img125.jpg",
+			    "name": "Ice Cream Cone Squishy",
+			    "place": "New Haven, CT",
+			    "date": 2016,
+			    "material": "Foam",
+			    "size": "",
+			    "acquired": "Free Handout"
+			  },
+			  {
+			    "no": 126,
+			    "image": "assets/img126.jpg",
+			    "name": "Croatia",
+			    "place": "Dubrovnik, Croatia",
+			    "date": "October 2017",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 127,
+			    "image": "assets/img127.jpg",
+			    "name": "Google",
+			    "place": "New Haven, CT",
+			    "date": "Fall 2018",
+			    "material": "Flexible Plastic",
+			    "size": "",
+			    "acquired": "Gift from Jessica"
+			  },
+			  {
+			    "no": 128,
+			    "image": "assets/img128.jpg",
+			    "name": "MoMA",
+			    "place": "New York City, NY",
+			    "date": "Fall 2018",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 129,
+			    "image": "assets/img129.jpg",
+			    "name": "Tucan",
+			    "place": "Costa Rica",
+			    "date": "2017 (?)",
+			    "material": "Metal and Enamel",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 130,
+			    "image": "assets/img130.jpg",
+			    "name": "CNN",
+			    "place": "Atlanta, GA",
+			    "date": "2017 (?)",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Gift from Mom"
+			  },
+			  {
+			    "no": 131,
+			    "image": "assets/img131.jpg",
+			    "name": "Guggenheim Museum",
+			    "place": "New York City, NY",
+			    "date": "July 2018",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 132,
+			    "image": "assets/img132.jpg",
+			    "name": "NYC Subway",
+			    "place": "New York City, NY",
+			    "date": "July 2018",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 133,
+			    "image": "assets/img133.jpg",
+			    "name": "F Train Bear",
+			    "place": "New York City, NY",
+			    "date": "July 2018",
+			    "material": "Metal",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 134,
+			    "image": "assets/img134.jpg",
+			    "name": "Seattle Art Museum",
+			    "place": "Seattle, WA",
+			    "date": "July 2018",
+			    "material": "Plastic",
+			    "size": "",
+			    "acquired": "Bought"
+			  },
+			  {
+			    "no": 135,
+			    "image": "assets/img135.jpg",
+			    "name": "Stripped Bear",
+			    "place": "State College, PA",
+			    "date": "Unknown",
+			    "material": "Cloth",
+			    "size": "",
+			    "acquired": "Inherited from Mom"
+			  }
+			]
+		});
+
+		document.getElementById("keychain-data").innerHTML += data;
+	</script>
+
+<!-- https://stackoverflow.com/questions/386281/how-to-implement-select-all-check-box-in-html -->
+	<script language="JavaScript">
+		function toggle(source) {
+		  checkboxes = document.getElementsByName('checkbox');
+		  for(var i=0, n=checkboxes.length;i<n;i++) {
+		    checkboxes[i].checked = source.checked;
+		  }
+		}
+	</script>
+
+</body>
+</html>
